@@ -1,0 +1,50 @@
+
+#header{
+    background-color: #6070A1;
+}
+.header{
+    vertical-align: middle;
+
+}
+.logo img{
+    width: 60px;
+    margin: 20px;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+}
+
+.kanan{
+    float: right;
+}
+.header a{
+    text-decoration: none;
+    line-height: 90px;
+    padding: 0px 20px;
+    color: white !important;
+    font-size: 25px;
+}
+
+.header ol >li
+{
+    display: inline;
+}
+.header ol{
+        margin: 0px !important;
+        box-sizing: border-box;
+}
+
+#slider img
+{
+    width: 100%;
+}
+
+#slider .gambar2{
+    display: none;
+}
+#slider .gambar3{
+    display: none;
+}
+#slider .gambar4{
+    display: none;
+}
