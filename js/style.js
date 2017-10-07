@@ -28,6 +28,7 @@ $(document).scroll(function () {
      $('#isi').css('top', 0);
  }
 });
+
 $(window).ready(function () {
  if($(window).width() <= 480){
  var ukuran  = $(window).width() / 60 ;
@@ -37,6 +38,15 @@ $(window).ready(function () {
  }
 })
 
+$(document).ready(function(){
+    $("#heroes .btnAll").mouseover(function(){
+        $(".btnAll").css("background-color", "yellow");
+    });
+    $("#heroes .btnAll").mouseout(function(){
+        $(".btnAll").css("background-color", "lightgray");
+    });
+
+});
 
 $('a[href^="#"]').on('click', function (e) {
  e.preventDefault();
@@ -62,7 +72,9 @@ angular.module('include_file', [])
   .controller('include_controller', ['$scope', function($scope) {
     $scope.templates =
       [{ name: 'page1.html', url: 'page1.html'},
-       { name: 'page3.html', url: 'page2.html'}];
+       { name: 'page2.html', url: 'page2.html'}];
+       $scope.pageone = $scope.templates[0];
+       $scope.pagetwo = $scope.templates[1];
   }]);
 
 /*page 1

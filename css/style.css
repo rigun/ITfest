@@ -121,10 +121,6 @@ a{
         top:110px;
 }
 
-#Home{
-
-}
-
 #Home img {
     width: 100%;
     position: fixed;
@@ -142,75 +138,6 @@ a{
         position: relative;
         top: 15px;
 }
-
-
-/*aboutUs*/
-
-.aboutUs {
-    background: #0a1a2e;
-    background-image: url(../paralax.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 0 1400px;
-    background-size: cover ;
-
-}
-
-/*penutup */
-
-#penutup {
-    padding: 50px 0;
-    background-color: #0B0F10;
-    background-repeat: no-repeat;
-    height: 300px;
-}
-.penutup2 {
-    padding: 115px 0px 0px 0px !important;
-}
-#penutup h3{
-    background-color: #f15b42;
-    border-radius: 5px;
-    width: 200px;
-    z-index: 2;
-    position: relative;
-}
-#penutup .bullet {
-    background-color: #786F66;
-    border-radius: 5px;
-    width: 400px;
-    height: 50px;
-    text-shadow: 2px 2px 1px black;
-    color: white;
-    margin: 0;
-    padding: 45px 20px;
-    position: relative;
-    top: -60px;
-    height: auto;
-    z-index: 1;
-}
-
-#penutup img{
-    width: 50px;
-}
-#penutup .gambar {
-    background-color: #786F66;
-    border-radius: 5px;
-    width: 400px;
-    text-shadow: 2px 2px 1px black;
-    color: white;
-    margin: 0;
-    padding: 45px 20px;
-    position: relative;
-    top: -60px;
-    left: 30px;
-    height: auto;
-    z-index: 1;
-}
-
-#penutup a{
-    display: inline;;
-}
-
 
 #Home2 {
     height: 810px;
@@ -249,7 +176,6 @@ a{
     width: 351px;
 }
 
-}
 /*lainnya*/
 
 
@@ -257,7 +183,12 @@ a{
     font-size: 18px;
 }
 
-
+#heroes {
+    background-color: #0B0F10;
+}
+#heroes button{
+    margin: 10px;
+}
 /*page 1 style*/
 /*aboutDota*/
 
