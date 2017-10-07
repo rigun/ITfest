@@ -22,8 +22,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
  </head>
-<body >
+<body ng-app="include_file">
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -52,28 +53,16 @@
 
 </section>
 
-    <section id="isi">
+    <section id="isi" ng-controller="include_controller">
         <section id="Home" class="Home">
                     <div class="twelve columns">
                         <img src="head.png">
                     </div>
         </section>
-    <section id="aboutDota">
-        <div class="container">
-            <div class="row">
-                <div class="six columns">
+        <div ng-model="template" ng-repeat="t in templates">
+        <div ng-include="t.url"></div>
+    </div>
 
-            </div>
-        </div>
-    </section>
-    <section id="treasure">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="heroes" >
-</section>
     <section id="aboutUs" class="aboutUs">
     </section>
     <section id="penutup">

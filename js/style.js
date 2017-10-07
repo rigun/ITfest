@@ -57,3 +57,11 @@ $(document).scroll(function() {
      $('#bab3').css('background-position-y', 1300 - ukuran4);
  }
 })
+
+angular.module('include_file', [])
+  .controller('include_controller', ['$scope', function($scope) {
+    $scope.templates =
+      [{ name: 'page1.html', url: 'page1.html'},
+       { name: 'page3.html', url: 'page2.html'},
+       { name: 'page3.html', url: 'page3.html'}];
+  }]);
