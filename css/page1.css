@@ -14,6 +14,14 @@
   background: #fff;
 }
 
+#aboutDota .garis {
+  position: relative;
+  bottom: 0;
+  left: 40%;
+  width: 20%;
+  height: 2px;
+  background: #fff;
+}
 #aboutDota .main-title::after {
   content: "";
   position: absolute;
