@@ -94,7 +94,7 @@ $(document).scroll(function() {
  }
 })
 
-var app = angular.module('appitfest', []);
+var app = angular.module('appitfest', ['ngAnimate']);
 
   app.controller('include_controller', ['$scope', function($scope) {
     $scope.templates =
@@ -106,12 +106,22 @@ var app = angular.module('appitfest', []);
 
     app.controller('heroes_controller', ['$scope', function($scope) {
       $scope.Myimages =
-        [{ name: 'pugde.jpg', src: 'images/heroes/pudge.jpg', attr: 'Strength'},
-         { name: 'phantom_assassin.jpg', src: 'images/heroes/phantom_assassin.jpg', attr: 'Agility'},
-         { name: 'sniper.jpg', src: 'images/heroes/sniper.jpg', attr: 'Agility'},
-         { name: 'invoker.jpg', src: 'images/heroes/invoker.jpg', attr: 'Intelligence'}];
+        [{ name: 'pugde.jpg', src: 'images/heroes/pudge.jpg', attr: 'Strength', skill: 'Meat Hook, Rot, Flesh Heap, Dismember'},
+         { name: 'phantom_assassin.jpg', src: 'images/heroes/phantom_assassin.jpg', attr: 'Agility', skill: 'Stifling Dagger, Phantom Strike, Blur, Coup de Grace'},
+         { name: 'sniper.jpg', src: 'images/heroes/sniper.jpg', attr: 'Agility', skill: 'Shrapnel, Headshot, Take Aim, Assassinate'},
+         { name: 'invoker.jpg', src: 'images/heroes/invoker.jpg', attr: 'Intelligence', skill: 'Quas, Wex, Exort'},
+         { name: 'juggernaut.jpg', src: 'images/heroes/juggernaut.jpg', attr: 'Agility', skill: 'Blade Fury, Healing Ward, Blade Dance, Omnislash'},
+          { name: 'slark.jpg', src: 'images/heroes/slark.jpg', attr: 'Agility', skill: 'Dark Pact, Pounce, Essense Shift, Shadow Dance'},
+          { name: 'axe.jpg', src: 'images/heroes/axe.jpg', attr: 'Strength', skill: 'Berseker\'s Call, Battle Hunger, Counter Helix, Culling Blade'},
+          { name: 'riki.jpg', src: 'images/heroes/riki.jpg', attr: 'Agility', skill: 'Smoke Screen, Blink Strike, Cloak and Dagger, Tricks of the Trade'},
+          { name: 'legion_commander.jpg', src: 'images/heroes/legion_commander.jpg', attr: 'Strength', skill: 'Overwhelming Odds, Press The Attack, Moment of Courage, Duel'},
+           { name: 'windrunner.jpg', src: 'images/heroes/windrunner.jpg', attr: 'Intelligence', skill: 'Shackleshot, Powershot, Windrun, Focus Fire'},
+           { name: 'mirana.jpg', src: 'images/heroes/mirana.jpg', attr: 'Agility', skill: 'Starstrom, Sacred Arrow, Leap, Moonlight Shadow'},
+           { name: 'bloodseeker.jpg', src: 'images/heroes/bloodseeker.jpg', attr: 'Agility', skill: 'Bloodrage, Blood Rite, Thirst, Rupture'}];
         $scope.image = $scope.Myimages;
+        $scope.myfilterBy="";
         $scope.filterBy = function(x) {
+
         $scope.myfilterBy = x;
     }
     }]);

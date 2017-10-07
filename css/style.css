@@ -189,6 +189,61 @@ a{
 #heroes button{
     margin: 10px;
 }
+#heroes img{
+    width: 100%;
+}
+#heroes .caption p{
+    font-size: 10px;
+}
+#heroes .caption{
+    height: 60px;
+    width: 100%;
+    color: white;
+    background-color: #211D1A;
+    margin-bottom: 15px;
+}
+#heroes .ng-repeat{
+      transition:all ease-in 0.25s;
+}
+@keyframes added {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes deleted {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: rotateY(360deg);
+  }
+}
+
+.pictureHeroes.ng-enter {
+  animation: 1s linear added;
+}
+
+.pictureHeroes.ng-leave {
+  animation: 1s linear deleted;
+}
+.pictureHeroes.ng-animate {
+  transition: all ease 0.4s;
+  }
+  .animate-enter,
+.animate-leave
+{
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
 /*page 1 style*/
 /*aboutDota*/
 
@@ -205,7 +260,6 @@ a{
     width: 200px;
     height: 350px;
 }
-
 
 #aboutDota .color {
     color: #ffff !important;
