@@ -62,6 +62,11 @@ angular.module('include_file', [])
   .controller('include_controller', ['$scope', function($scope) {
     $scope.templates =
       [{ name: 'page1.html', url: 'page1.html'},
-       { name: 'page3.html', url: 'page2.html'},
-       { name: 'page3.html', url: 'page3.html'}];
+       { name: 'page3.html', url: 'page2.html'}];
   }]);
+
+/*page 1
+    edit disini */
+
+/*page 2
+    edit disini */
