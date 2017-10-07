@@ -302,3 +302,11 @@ a{
 #treasure h4{
     font-size: 20px;
 }
+
+/*Page 2*/
+
+#aboutUs .circleImage{
+    width: 10%;
+    height: 10%;
+    border-bottom:20px solid #786F66
+}
