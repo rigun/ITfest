@@ -6,14 +6,52 @@
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-<section id="treasure">
-    <div class="container">
-        <p>WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+<section id="aboutUs">
+  <div class="row" align="center">
+    <div class="four columns color">
+      <div class="bio">
+        <img src="images/man.png">
+        <div class="centerImage">
+          <div class="text">QUOTE</div>
+        </div>
+        <h1 style="border-radius:0px 50px;">Rio Gunawan</h1>
+      </div>
     </div>
+    <div class="four columns color">
+      <div class="bio">
+        <img src="images/man.png">
+        <div class="centerImage">
+          <div class="text">QUOTE</div>
+        </div>
+        <h1 style="border-radius: 50px 50px 0px 0px;">Albertus Ari</h1>
+      </div>
+    </div>
+    <div class="four columns color">
+      <div class="bio">
+        <img src="images/man.png" >
+        <div class="centerImage">
+          <div class="text">QUOTE</div>
+        </div>
+        <h1 style="border-radius:50px 0px;">Vian Handika</h1>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="heroes" >
-</section>
+
+
+<div id="map" style="width:1800px;height:400px;background:yellow;"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(-7.7784572,110.3929171,13), zoom: 20
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
