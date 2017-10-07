@@ -29,8 +29,63 @@ $(document).ready(function(){
         },
     });
 });
+</script>
 
+<script>
+$(document).ready(function(){
+    $("#gameplay").on({
+        mouseover: function(){
+          var i=0;
+          for(i; i<10; i++){
+            $("#gameplayimage").animate({bottom : '10px'}, "slow");
+            $("#gameplayimage").animate({bottom : '0px'}, "slow");
+          }
 
+        },
+        mouseleave: function(){
+            $("#gameplayimage").stop(true,true);
+            $("#gameplayimage").animate({bottom : '0px'}, "10000");
+        },
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#heroesxxx").on({
+        mouseover: function(){
+          var i=0;
+          for(i; i<10; i++){
+            $("#heroesimage").animate({bottom : '10px'}, "slow");
+            $("#heroesimage").animate({bottom : '0px'}, "slow");
+          }
+
+        },
+        mouseleave: function(){
+            $("#heroesimage").stop(true,true);
+            $("#heroesimage").animate({bottom : '0px'}, "10000");
+        },
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#competition").on({
+        mouseover: function(){
+          var i=0;
+          for(i; i<10; i++){
+            $("#competitionimage").animate({bottom : '10px'}, "slow");
+            $("#competitionimage").animate({bottom : '0px'}, "slow");
+          }
+
+        },
+        mouseleave: function(){
+            $("#competitionimage").stop(true,true);
+            $("#competitionimage").animate({bottom : '0px'}, "10000");
+        },
+    });
+});
 </script>
 
  </head>
@@ -53,15 +108,15 @@ $(document).ready(function(){
                     <p>Dota2 is played in matches between two teams of five players, with each team occupying and defending their own separate base on the map.</p>
                 </div>
 
-                <div class="three columns color" style="text-align:center">
-                    <img src="images/heroes.png" class="icon">
-                    <h5 class="sub-title">Heroes</h5>
+                <div class="three columns color" id="heroesxxx" style="text-align:center">
+                    <img src="images/heroes.png" class="icon" id="heroesimage">
+                    <h5 class="sub-title" id="heroestitle">Heroes</h5>
                     <p>Dota2 features 74 heroes which are separated into groups according to their main attributes, Strength, Agility, and Intelligence. </p>
                 </div>
 
-                <div class="three columns color" style="text-align:center">
-                    <img src="images/throphy.png" class="icon">
-                    <h5 class="sub-title">Competition</h5>
+                <div class="three columns color" style="text-align:center" id="competition">
+                    <img src="images/throphy.png" class="icon" id="competitionimage">
+                    <h5 class="sub-title" id="competitiontitle">Competition</h5>
                     <p>The International Dota2 Competition is the highest competition in the world and the prize pool is more than USD $20 Millions.</p>
                 </div>
             </div>
