@@ -40,12 +40,38 @@ $(window).ready(function () {
 
 $(document).ready(function(){
     $("#heroes .btnAll").mouseover(function(){
-        $(".btnAll").css("background-color", "yellow");
+        $(".btnAll").css("background-color", "#0A6EDD");
+        $(".btnAll").css("color", "white");
+        $(".btnAll").css("transition-duration", "0.4s");
+
     });
     $("#heroes .btnAll").mouseout(function(){
-        $(".btnAll").css("background-color", "lightgray");
+        $(".btnAll").css("background-color", "#0B0F10");
     });
-
+    $("#heroes .btnStrength").mouseover(function(){
+        $(".btnStrength").css("background-color", "#0A6EDD");
+        $(".btnStrength").css("color", "white");
+        $(".btnStrength").css("transition-duration", "0.4s");
+    });
+    $("#heroes .btnStrength").mouseout(function(){
+        $(".btnStrength").css("background-color", "#0B0F10");
+    });
+    $("#heroes .btnAgility").mouseover(function(){
+        $(".btnAgility").css("background-color", "#0A6EDD");
+        $(".btnAgility").css("color", "white");
+        $(".btnAgility").css("transition-duration", "0.4s");
+    });
+    $("#heroes .btnAgility").mouseout(function(){
+        $(".btnAgility").css("background-color", "#0B0F10");
+    });
+    $("#heroes .btnIntelligence").mouseover(function(){
+        $(".btnIntelligence").css("background-color", "#0A6EDD");
+        $(".btnIntelligence").css("color", "white");
+        $(".btnIntelligence").css("transition-duration", "0.4s");
+    });
+    $("#heroes .btnIntelligence").mouseout(function(){
+        $(".btnIntelligence").css("background-color", "#0B0F10");
+    });
 });
 
 $('a[href^="#"]').on('click', function (e) {
@@ -68,14 +94,27 @@ $(document).scroll(function() {
  }
 })
 
-angular.module('include_file', [])
-  .controller('include_controller', ['$scope', function($scope) {
+var app = angular.module('appitfest', []);
+
+  app.controller('include_controller', ['$scope', function($scope) {
     $scope.templates =
       [{ name: 'page1.html', url: 'page1.html'},
        { name: 'page2.html', url: 'page2.html'}];
        $scope.pageone = $scope.templates[0];
        $scope.pagetwo = $scope.templates[1];
   }]);
+
+    app.controller('heroes_controller', ['$scope', function($scope) {
+      $scope.Myimages =
+        [{ name: 'pugde.jpg', src: 'images/heroes/pudge.jpg', attr: 'Strength'},
+         { name: 'phantom_assassin.jpg', src: 'images/heroes/phantom_assassin.jpg', attr: 'Agility'},
+         { name: 'sniper.jpg', src: 'images/heroes/sniper.jpg', attr: 'Agility'},
+         { name: 'invoker.jpg', src: 'images/heroes/invoker.jpg', attr: 'Intelligence'}];
+        $scope.image = $scope.Myimages;
+        $scope.filterBy = function(x) {
+        $scope.myfilterBy = x;
+    }
+    }]);
 
 /*page 1
     edit disini */
