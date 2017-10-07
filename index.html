@@ -53,25 +53,27 @@
 
 </section>
 
-    <section id="isi" ng-controller="include_controller">
-        <section id="Home" class="Home">
+<section id="isi" ng-controller="include_controller">
+    <section id="Home" class="Home">
                     <div class="twelve columns">
                         <img src="head.png">
                     </div>
-        </section>
-        <div ng-model="template" ng-repeat="t in templates">
-        <div ng-include="t.url"></div>
-    </div>
-
-    <section id="aboutUs" class="aboutUs">
     </section>
-    <section id="penutup">
-        <div class="container">
-            <div class="row">
+        <div ng-include="pageone.url"></div>
+        <section id="heroes">
+            <div class="container">
+                <center> <h1>Dota's Heroes</h1>
+                    Dota have a lot of hero and their have they own role like Carry, Support, Nuker, Initiator, etc.<br/>
+                    Hence, they have two attack type Melee and Ranged.<br/>
+                    Before choose a hero, the player have to see the primary attribute from hero like strength, agility, and intelligence because each attribute is unique<br/>
+                    <button> All </button><button> Strength </button><button> Agility </button><button> Intelligence </button>
+                </center>
 
+                <div class="row">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <div ng-include="pagetwo.url"></div>
 </section>
 
 <!-- End Document
