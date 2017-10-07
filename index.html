@@ -17,14 +17,17 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/page1.css">
+  <link rel="stylesheet" href="css/page2.css">
   <link rel="stylesheet" href="css/mobile.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular/angular.animate.js"></script>
  </head>
-<body ng-app="include_file">
+<body ng-app="appitfest">
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,27 +56,35 @@
 
 </section>
 
-<section id="isi" ng-controller="include_controller">
+<section id="isi">
     <section id="Home" class="Home">
-                    <div class="twelve columns">
+                    <div class="twelve">
                         <img src="head.png">
                     </div>
     </section>
+    <div ng-controller="include_controller">
         <div ng-include="pageone.url"></div>
-        <section id="heroes">
-            <div class="container">
+    </div>
+        <section id="heroes" ng-controller="heroes_controller">
+            <div class="container" >
                 <center> <h1>Dota's Heroes</h1>
-                    Dota have a lot of hero and their have they own role like Carry, Support, Nuker, Initiator, etc.<br/>
+                    Dota have a lot of hero and they have their own role like Carry, Support, Nuker, Initiator, etc.<br/>
                     Hence, they have two attack type Melee and Ranged.<br/>
                     Before choose a hero, the player have to see the primary attribute from hero like Strength, Agility, and Intelligence <br/>because each attribute is unique<br/>
-                    <button class="btnAll"> All </button><button class="btnStrength"> Strength </button><button class="btnAgility"> Agility </button><button class="btnIntelligence"> Intelligence </button>
+                    <button ng-click="filterBy()" class="btnAll"> All </button><button ng-click="filterBy('Strength')" class="btnStrength"> Strength </button><button ng-click="filterBy('Agility')" class="btnAgility"> Agility </button><button ng-click="filterBy('Intelligence')" class="btnIntelligence"> Intelligence </button>
                 </center>
-
-                <div class="row">
-                </div>
+                    <div class="twelve columns" >
+                        <div class="pictureHeroes three columns" ng-repeat="i in image | filter: myfilterBy">
+                            <img src={{i.src}}>
+                            <div class="caption">Skill :<p>{{i.skill}}</p></div>
+                        </div>
+                    </div>
             </div>
         </section>
+        <div ng-controller="include_controller">
         <div ng-include="pagetwo.url"></div>
+        </div>
+
 </section>
 
 <!-- End Document
