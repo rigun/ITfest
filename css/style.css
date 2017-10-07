@@ -143,66 +143,6 @@ a{
         top: 15px;
 }
 
-/*aboutDota*/
-
-#aboutDota{
-    height: 450px;
-    position: static;
-    box-sizing: border-box;
-    background-image: url('../bg2.png');
-    padding: 50px 50px;
-    z-index: 1;
-}
-#aboutDota img {
-    position: static;
-    width: 200px;
-    height: 350px;
-}
-
-
-#aboutDota .color {
-    color: #ffff !important;
-}
-
-/*treasure*/
-
-#treasure{
-    background-image: url('../bg3.png');
-    background-repeat: no-repeat;
-    height: auto;
-    margin-left: 0;
-    padding: 50px 0px;
-}
-#treasure h2{
-    background-color:#f15b42;
-    border-radius: 10px;
-    width:50%;
-    color: white;
-}
-#treasure img{
-    position: relative;
-    top: 50px;
-    width: 175px;
-    margin: 25px 0;
-}
-
-#treasure .twelve{
-    position: relative;
-    color: black;
-    padding-bottom: 20px;
-}
-
-#treasure .four{
-    border-radius: 10px;
-    background-color:#786F66;
-    background-position: center;
-    color: black;
-}
-#treasure h4{
-    font-size: 20px;
-}
-
-
 
 /*aboutUs*/
 
@@ -315,4 +255,65 @@ a{
 
 #menu .menu-link {
     font-size: 18px;
+}
+
+
+/*page 1 style*/
+/*aboutDota*/
+
+#aboutDota{
+    height: 450px;
+    position: static;
+    box-sizing: border-box;
+    background-image: url('../bg2.png');
+    padding: 50px 50px;
+    z-index: 1;
+}
+#aboutDota img {
+    position: static;
+    width: 200px;
+    height: 350px;
+}
+
+
+#aboutDota .color {
+    color: #ffff !important;
+}
+
+/*treasure*/
+
+#treasure{
+    background-image: url('../bg3.png');
+    background-repeat: no-repeat;
+    height: auto;
+    margin-left: 0;
+    padding: 50px 0px;
+}
+#treasure h2{
+    background-color:#f15b42;
+    border-radius: 10px;
+    width:50%;
+    color: white;
+}
+#treasure img{
+    position: relative;
+    top: 50px;
+    width: 175px;
+    margin: 25px 0;
+}
+
+#treasure .twelve{
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+#treasure .four{
+    border-radius: 10px;
+    background-color:#786F66;
+    background-position: center;
+    color: black;
+}
+#treasure h4{
+    font-size: 20px;
 }
