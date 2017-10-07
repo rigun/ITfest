@@ -1,76 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CBIS->Next</title>
+  <title>Dota2</title>
   <meta name="description" content="">
   <meta name="author" content="">
-
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <script src="js/jquery/dist/jquery.js"></script>
-  <script src="js/jquery/dist/jquery.min.js"></script>
-  <script src="js/style.js"></script>
-</head>
-<body>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+ </head>
+<body >
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="header" class=" twelve columns">
-    <div class="logo move two columns">
-        <center>
-    <img src="images/uajy.png">
-</center>
-</div>
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<div class="eight columns">
+<section id="site-menu" class="site-menu">
     <div class="container">
-      <div class="header row">
-            <center>
-                <ol>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Home</span></a></li>
-                </ol>
-            </center>
+        <div class="row">
+            <div class="twelve columns">
+                <center>
+                <div class="hamburger"><span><span class="openbtn" onclick="openNav()">&#9776;</span><span class="closebtn" onclick="closeNav()" >&#735;</span></span></div>
+                <nav class="menu" id="menu">
+                    <ul>
+                        <li><a class="menu-link" onclick="closeNav()" href="#Home">Home</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#aboutDota" >About Dota2</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#treasure" >Treasure</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#equipment" >Equipments</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#heroes" >heroes</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#aboutUs" >About Us</a></li>
+                    </ul>
+
+                </nav>
+                </center>
+            </div>
         </div>
     </div>
-  </div>
-  <div class="logo two columns">
-      <center>
-  <img src="images/uajy.png">
-  </center>
-  </div>
-  </section>
-  <section id="slider">
-      <img class="gambar1" src="images/slider/1.jpg">
-      <img class="gambar2" src="images/slider/2.jpg">
-      <img class="gambar3" src="images/slider/3.jpg">
-      <img class="gambar4" src="images/slider/4.jpg">
-  </section>
 
+</section>
+
+    <section id="isi">
+        <section id="Home" class="Home">
+                    <div class="twelve columns">
+                        <img src="head.png">
+                    </div>
+        </section>
+    <section id="aboutDota">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+
+            </div>
+        </div>
+    </section>
+    <section id="treasure">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <section id="heroes" >
+</section>
+    <section id="aboutUs" class="aboutUs">
+    </section>
+    <section id="penutup">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+</section>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/menu.js"> </script>
+  <script src="js/style.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>

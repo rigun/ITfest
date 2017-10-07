@@ -1,50 +1,319 @@
 
-#header{
-    background-color: #6070A1;
-}
-.header{
-    vertical-align: middle;
-
-}
-.logo img{
-    width: 60px;
-    margin: 20px;
-    position: relative;
-    right: 0px;
-    bottom: 0px;
+@font-face {
+    font-family: "CaviarDreams";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../webfonts/CaviarDreams.ttf');
 }
 
-.kanan{
-    float: right;
-}
-.header a{
-    text-decoration: none;
-    line-height: 90px;
-    padding: 0px 20px;
-    color: white !important;
-    font-size: 25px;
+@font-face {
+    font-family: "CaviarDreams";
+    font-style: italic;
+    font-weight: normal;
+    src: url('../webfonts/CaviarDreams_Italic.ttf');
 }
 
-.header ol >li
-{
-    display: inline;
-}
-.header ol{
-        margin: 0px !important;
-        box-sizing: border-box;
+@font-face {
+    font-family: "CaviarDreams";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../webfonts/CaviarDreams_Bold.ttf');
 }
 
-#slider img
-{
+@font-face {
+    font-family: "CaviarDreams";
+    font-style: italic;
+    font-weight: bold;
+    src: url('../webfonts/CaviarDreams_BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../webfonts/BebasNeue Regular.ttf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:  "BebasNeue" !important;
+}
+
+body {
+    background-color: #0B0F10;
+    font-family: "CaviarDreams";
+}
+
+a{
+    display: block;
+        color: #fff ;
+}
+/* Header */
+
+.header {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Site Menu */
+
+.site-menu {
     width: 100%;
+    box-sizing: border-box;
+    background-image: url('../bgheader.png');
+    background-repeat: no-repeat;
+    background-size: auto 90px;
+    z-index: 3;
+}
+.site-menu .menu ul{
+    margin: 0px !important;
+}
+.site-menu .logo {
+    display: block;
+    float: left;
+    width: 50px;
+    padding: 10px 5px;
 }
 
-#slider .gambar2{
+.site-menu .menu {
+    position: relative;
+
+}
+
+.site-menu .menu ul > li {
+    display: inline-block;
+
+}
+
+.site-menu .menu ul > li a {
+    display: block;
+    font-size: 18px;
+    line-height: 55px;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.site-menu .closebtn{
+    visibility: hidden;
+    position: fixed;
+}
+
+.site-menu span{
+    visibility: hidden;
+    position: fixed;
+    font-size:20px;
+    cursor:pointer;
+}
+.site-menu .logo2{
     display: none;
 }
-#slider .gambar3{
-    display: none;
+
+
+/* Home */
+
+.Home{
+    position: relative;
+    display: block;
+    height: 800px;
 }
-#slider .gambar4{
-    display: none;
+
+#Home .teks{
+        position: relative;
+        top:110px;
+}
+
+#Home{
+
+}
+
+#Home img {
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    top: -65px;
+    z-index: -1;
+}
+
+#Home .bg1{
+        width:300px;
+        height:55px;
+        border-radius: 20px;
+        background-color: white;
+        color: #bf3b2b;
+        position: relative;
+        top: 15px;
+}
+
+/*aboutDota*/
+
+#aboutDota{
+    height: 450px;
+    position: static;
+    box-sizing: border-box;
+    background-image: url('../bg2.png');
+    padding: 50px 50px;
+    z-index: 1;
+}
+#aboutDota img {
+    position: static;
+    width: 200px;
+    height: 350px;
+}
+
+
+#aboutDota .color {
+    text-shadow: 2px 2px 0px black;
+    color: #D7D7D7 !important;
+}
+
+/*treasure*/
+
+#treasure{
+    background-image: url('../bg3.png');
+    background-repeat: no-repeat;
+    height: auto;
+    margin-left: 0;
+    padding: 50px 0px;
+}
+#treasure h2{
+    background-color:#f15b42;
+    border-radius: 10px;
+    width:50%;
+    color: white;
+}
+#treasure img{
+    position: relative;
+    top: 50px;
+    width: 175px;
+    margin: 25px 0;
+}
+
+#treasure .twelve{
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+#treasure .four{
+    border-radius: 10px;
+    background-color:#786F66;
+    background-position: center;
+    color: black;
+}
+#treasure h4{
+    font-size: 20px;
+}
+
+
+
+/*aboutUs*/
+
+.aboutUs {
+    background: #0a1a2e;
+    background-image: url(../paralax.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 1400px;
+    background-size: cover ;
+
+}
+
+/*penutup */
+
+#penutup {
+    padding: 50px 0;
+    background-color: #0B0F10;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+.penutup2 {
+    padding: 115px 0px 0px 0px !important;
+}
+#penutup h3{
+    background-color: #f15b42;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 2;
+    position: relative;
+}
+#penutup .bullet {
+    background-color: #786F66;
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    margin: 0;
+    padding: 45px 20px;
+    position: relative;
+    top: -60px;
+    height: auto;
+    z-index: 1;
+}
+
+#penutup img{
+    width: 50px;
+}
+#penutup .gambar {
+    background-color: #786F66;
+    border-radius: 5px;
+    width: 400px;
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    margin: 0;
+    padding: 45px 20px;
+    position: relative;
+    top: -60px;
+    left: 30px;
+    height: auto;
+    z-index: 1;
+}
+
+#penutup a{
+    display: inline;;
+}
+
+
+#Home2 {
+    height: 810px;
+}
+#Home2 .teks{
+        position: relative;
+        top: 55px;
+}
+
+#Home2 .bg1{
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+        background-image: url(../bgheader.png);
+        background-size: 100% 50px;
+        background-repeat: no-repeat;
+        color: white;
+        position: relative;
+        top: 15px;
+        z-index: 2;
+}
+
+#Home2 .bg2{
+    border-radius: 10px;
+    background-image: url(../bg2.png);
+    background-size: 100%;
+    color: white;
+    font-size: 25px;
+    padding: 25px 0px;
+    position: relative;
+    top: -25px;
+    z-index: 1;
+}
+
+#Home2 img{
+    width: 351px;
+}
+
+}
+/*lainnya*/
+
+
+#menu .menu-link {
+    font-size: 18px;
 }
