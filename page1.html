@@ -2,92 +2,7 @@
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!--  <script>
-$(document).ready(function(){
-    $("#test1").hover(function(){
-      $("#imagetest").animate({bottom : '10px'}, "slow");
-      $("#imagetest").animate({bottom : '0px'}, "slow");
-    });
-});
-</script>-->
-
-<script>
-$(document).ready(function(){
-    $("#gameplay").on({
-        mouseover: function(){
-          var i=0;
-          for(i; i<10; i++){
-            $("#gameplayimage").animate({bottom : '10px'}, "slow");
-            $("#gameplayimage").animate({bottom : '0px'}, "slow");
-          }
-
-        },
-        mouseleave: function(){
-            $("#gameplayimage").stop(true,true);
-            $("#gameplayimage").animate({bottom : '0px'}, "10000");
-        },
-    });
-});
-</script>
-
-<script>
-$(document).ready(function(){
-    $("#gameplay").on({
-        mouseover: function(){
-          var i=0;
-          for(i; i<10; i++){
-            $("#gameplayimage").animate({bottom : '10px'}, "slow");
-            $("#gameplayimage").animate({bottom : '0px'}, "slow");
-          }
-
-        },
-        mouseleave: function(){
-            $("#gameplayimage").stop(true,true);
-            $("#gameplayimage").animate({bottom : '0px'}, "10000");
-        },
-    });
-});
-</script>
-
-<script>
-$(document).ready(function(){
-    $("#heroesxxx").on({
-        mouseover: function(){
-          var i=0;
-          for(i; i<10; i++){
-            $("#heroesimage").animate({bottom : '10px'}, "slow");
-            $("#heroesimage").animate({bottom : '0px'}, "slow");
-          }
-
-        },
-        mouseleave: function(){
-            $("#heroesimage").stop(true,true);
-            $("#heroesimage").animate({bottom : '0px'}, "10000");
-        },
-    });
-});
-</script>
-
-<script>
-$(document).ready(function(){
-    $("#competition").on({
-        mouseover: function(){
-          var i=0;
-          for(i; i<10; i++){
-            $("#competitionimage").animate({bottom : '10px'}, "slow");
-            $("#competitionimage").animate({bottom : '0px'}, "slow");
-          }
-
-        },
-        mouseleave: function(){
-            $("#competitionimage").stop(true,true);
-            $("#competitionimage").animate({bottom : '0px'}, "10000");
-        },
-    });
-});
-</script>
-
+  <script src="js/page1.js"></script>
  </head>
 <body >
 
@@ -98,25 +13,28 @@ $(document).ready(function(){
             <div class="row">
                 <div class="three columns color" >
                   <h4 class="main-title" id="mainTitle">About Dota2</h4>
-                      <p>Dota2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation.
+                      <p style="text-align:justify">Dota2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation.
                       The game is the stand-alone sequel to Defense of the Ancients (DotA)</p>
                 </div>
 
-                <div class="three columns color" style="text-align:center" id="gameplay">
+                <div class="three columns color row" style="text-align:center" id="gameplay">
                     <img src="images/gameplay.png" class="icon" id="gameplayimage">
                     <h5 class="sub-title" id="gameplaytitle">Gameplay</h5>
+                    <hr class="garis" id="gameplaygaris"></hr>
                     <p>Dota2 is played in matches between two teams of five players, with each team occupying and defending their own separate base on the map.</p>
                 </div>
 
                 <div class="three columns color" id="heroesxxx" style="text-align:center">
                     <img src="images/heroes.png" class="icon" id="heroesimage">
                     <h5 class="sub-title" id="heroestitle">Heroes</h5>
+                    <hr class="garis" id="heroesgaris"></hr>
                     <p>Dota2 features 74 heroes which are separated into groups according to their main attributes, Strength, Agility, and Intelligence. </p>
                 </div>
 
                 <div class="three columns color" style="text-align:center" id="competition">
                     <img src="images/throphy.png" class="icon" id="competitionimage">
                     <h5 class="sub-title" id="competitiontitle">Competition</h5>
+                    <hr class="garis" id="competitiongaris"></hr>
                     <p>The International Dota2 Competition is the highest competition in the world and the prize pool is more than USD $20 Millions.</p>
                 </div>
             </div>
