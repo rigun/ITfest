@@ -106,18 +106,18 @@ var app = angular.module('appitfest', ['ngAnimate']);
 
     app.controller('heroes_controller', ['$scope', function($scope) {
       $scope.Myimages =
-        [{ name: 'pugde.jpg', src: 'images/heroes/pudge.jpg', attr: 'Strength', skill: 'Meat Hook, Rot, Flesh Heap, Dismember'},
-         { name: 'phantom_assassin.jpg', src: 'images/heroes/phantom_assassin.jpg', attr: 'Agility', skill: 'Stifling Dagger, Phantom Strike, Blur, Coup de Grace'},
-         { name: 'sniper.jpg', src: 'images/heroes/sniper.jpg', attr: 'Agility', skill: 'Shrapnel, Headshot, Take Aim, Assassinate'},
-         { name: 'invoker.jpg', src: 'images/heroes/invoker.jpg', attr: 'Intelligence', skill: 'Quas, Wex, Exort'},
-         { name: 'juggernaut.jpg', src: 'images/heroes/juggernaut.jpg', attr: 'Agility', skill: 'Blade Fury, Healing Ward, Blade Dance, Omnislash'},
-          { name: 'slark.jpg', src: 'images/heroes/slark.jpg', attr: 'Agility', skill: 'Dark Pact, Pounce, Essense Shift, Shadow Dance'},
-          { name: 'axe.jpg', src: 'images/heroes/axe.jpg', attr: 'Strength', skill: 'Berseker\'s Call, Battle Hunger, Counter Helix, Culling Blade'},
-          { name: 'riki.jpg', src: 'images/heroes/riki.jpg', attr: 'Agility', skill: 'Smoke Screen, Blink Strike, Cloak and Dagger, Tricks of the Trade'},
-          { name: 'legion_commander.jpg', src: 'images/heroes/legion_commander.jpg', attr: 'Strength', skill: 'Overwhelming Odds, Press The Attack, Moment of Courage, Duel'},
-           { name: 'windrunner.jpg', src: 'images/heroes/windrunner.jpg', attr: 'Intelligence', skill: 'Shackleshot, Powershot, Windrun, Focus Fire'},
-           { name: 'mirana.jpg', src: 'images/heroes/mirana.jpg', attr: 'Agility', skill: 'Starstrom, Sacred Arrow, Leap, Moonlight Shadow'},
-           { name: 'bloodseeker.jpg', src: 'images/heroes/bloodseeker.jpg', attr: 'Agility', skill: 'Bloodrage, Blood Rite, Thirst, Rupture'}];
+        [{ name: 'Pugde', src: 'images/heroes/pudge.jpg', attr: 'Strength', skill: 'Meat Hook, Rot, Flesh Heap, Dismember'},
+         { name: 'Phantom Assassin', src: 'images/heroes/phantom_assassin.jpg', attr: 'Agility', skill: 'Stifling Dagger, Phantom Strike, Blur, Coup de Grace'},
+         { name: 'Sniper', src: 'images/heroes/sniper.jpg', attr: 'Agility', skill: 'Shrapnel, Headshot, Take Aim, Assassinate'},
+         { name: 'Invoker', src: 'images/heroes/invoker.jpg', attr: 'Intelligence', skill: 'Quas, Wex, Exort'},
+         { name: 'Juggernaut', src: 'images/heroes/juggernaut.jpg', attr: 'Agility', skill: 'Blade Fury, Healing Ward, Blade Dance, Omnislash'},
+          { name: 'Slark', src: 'images/heroes/slark.jpg', attr: 'Agility', skill: 'Dark Pact, Pounce, Essense Shift, Shadow Dance'},
+          { name: 'Axe', src: 'images/heroes/axe.jpg', attr: 'Strength', skill: 'Berseker\'s Call, Battle Hunger, Counter Helix, Culling Blade'},
+          { name: 'Riki', src: 'images/heroes/riki.jpg', attr: 'Agility', skill: 'Smoke Screen, Blink Strike, Cloak and Dagger, Tricks of the Trade'},
+          { name: 'Legion Commander', src: 'images/heroes/legion_commander.jpg', attr: 'Strength', skill: 'Overwhelming Odds, Press The Attack, Moment of Courage, Duel'},
+           { name: 'Windranger', src: 'images/heroes/windrunner.jpg', attr: 'Intelligence', skill: 'Shackleshot, Powershot, Windrun, Focus Fire'},
+           { name: 'Mirana', src: 'images/heroes/mirana.jpg', attr: 'Agility', skill: 'Starstrom, Sacred Arrow, Leap, Moonlight Shadow'},
+           { name: 'Bloodseeker', src: 'images/heroes/bloodseeker.jpg', attr: 'Agility', skill: 'Bloodrage, Blood Rite, Thirst, Rupture'}];
         $scope.image = $scope.Myimages;
         $scope.myfilterBy="";
         $scope.filterBy = function(x) {
@@ -126,8 +126,164 @@ var app = angular.module('appitfest', ['ngAnimate']);
     }
     }]);
 
-/*page 1
-    edit disini */
+/*direct-hover*/
+;( function( $, window, undefined ) {
 
-/*page 2
-    edit disini */
+	'use strict';
+
+	$.HoverDir = function( options, element ) {
+
+		this.$el = $( element );
+		this._init( options );
+
+	};
+
+	// the options
+	$.HoverDir.defaults = {
+		speed : 300,
+		easing : 'ease',
+		hoverDelay : 0,
+		inverse : false
+	};
+
+	$.HoverDir.prototype = {
+
+		_init : function( options ) {
+
+			this.options = $.extend( true, {}, $.HoverDir.defaults, options );
+
+			this.transitionProp = 'all ' + this.options.speed + 'ms ' + this.options.easing;
+
+			this.support = Modernizr.csstransitions;
+
+			this._loadEvents();
+
+		},
+		_loadEvents : function() {
+
+			var self = this;
+
+			this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
+
+				var $el = $( this ),
+					$hoverElem = $el.find( '.name' ),
+					direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
+					styleCSS = self._getStyle( direction );
+
+				if( event.type === 'mouseenter' ) {
+
+					$hoverElem.hide().css( styleCSS.from );
+					clearTimeout( self.tmhover );
+
+					self.tmhover = setTimeout( function() {
+
+						$hoverElem.show( 0, function() {
+
+							var $el = $( this );
+							if( self.support ) {
+								$el.css( 'transition', self.transitionProp );
+							}
+							self._applyAnimation( $el, styleCSS.to, self.options.speed );
+
+						} );
+
+
+					}, self.options.hoverDelay );
+
+				}
+				else {
+
+					if( self.support ) {
+						$hoverElem.css( 'transition', self.transitionProp );
+					}
+					clearTimeout( self.tmhover );
+					self._applyAnimation( $hoverElem, styleCSS.from, self.options.speed );
+				}
+			} );
+		},
+		_getDir : function( $el, coordinates ) {
+
+			var w = $el.width(),
+				h = $el.height(),
+
+				x = ( coordinates.x - $el.offset().left - ( w/2 )) * ( w > h ? ( h/w ) : 1 ),
+				y = ( coordinates.y - $el.offset().top  - ( h/2 )) * ( h > w ? ( w/h ) : 1 ),
+				direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 ) % 4;
+		return direction;
+		},
+		_getStyle : function( direction ) {
+			var fromStyle, toStyle,
+				slideFromTop = { left : '0px', top : '-100%' },
+				slideFromBottom = { left : '0px', top : '100%' },
+				slideFromLeft = { left : '-100%', top : '0px' },
+				slideFromRight = { left : '100%', top : '0px' },
+				slideTop = { top : '0px' },
+				slideLeft = { left : '0px' };
+			switch( direction ) {
+				case 0:
+					// from top
+					fromStyle = !this.options.inverse ? slideFromTop : slideFromBottom;
+					toStyle = slideTop;
+					break;
+				case 1:
+					// from right
+					fromStyle = !this.options.inverse ? slideFromRight : slideFromLeft;
+					toStyle = slideLeft;
+					break;
+				case 2:
+					// from bottom
+					fromStyle = !this.options.inverse ? slideFromBottom : slideFromTop;
+					toStyle = slideTop;
+					break;
+				case 3:
+					// from left
+					fromStyle = !this.options.inverse ? slideFromLeft : slideFromRight;
+					toStyle = slideLeft;
+					break;
+			};
+			return { from : fromStyle, to : toStyle };
+		},
+		_applyAnimation : function( el, styleCSS, speed ) {
+			$.fn.applyStyle = this.support ? $.fn.css : $.fn.animate;
+			el.stop().applyStyle( styleCSS, $.extend( true, [], { duration : speed + 'ms' } ) );
+		},
+	};
+	var logError = function( message ) {
+		if ( window.console ) {
+			window.console.error( message );
+		}
+	};
+	$.fn.hoverdir = function( options ) {
+		var instance = $.data( this, 'hoverdir' );
+		if ( typeof options === 'string' ) {
+			var args = Array.prototype.slice.call( arguments, 1 );
+			this.each(function() {
+				if ( !instance ) {
+					logError( "cannot call methods on hoverdir prior to initialization; " +
+					"attempted to call method '" + options + "'" );
+					return;
+				}
+				if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
+
+					logError( "no such method '" + options + "' for hoverdir instance" );
+					return;
+				}
+				instance[ options ].apply( instance, args );
+			});
+		}
+		else {
+
+			this.each(function() {
+				if ( instance ) {
+					instance._init();
+				}
+				else {
+					instance = $.data( this, 'hoverdir', new $.HoverDir( options, this ) );
+				}
+			});
+
+		}
+		return instance;
+	};
+
+} )( jQuery, window );

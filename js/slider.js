@@ -1,22 +1,25 @@
-$(document).ready(function (){
-    temp = 0;
-    function changeslid(a){
-        temp = a;
+var myIndex =0;
+carousel();
+
+function changeSlid(n){
+    var i,t;
+    var x = document.getElementsByClassName("mySlider");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
     }
-    if(temp == 0)
-    {
-        temp++;
+    x[n].style.display = "block";
+    myIndex = n;
+
+}
+function carousel() {
+    var i,t;
+    var x = document.getElementsByClassName("mySlider");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
     }
-    if(temp == 1)
-    {
-        temp++;
-    }
-    if(temp == 2)
-    {
-        temp++;
-    }
-    if(temp == 3)
-    {
-        temp=0;
-    }
-})
+    myIndex+=1;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    t = setTimeout(carousel, 7000);
+     // Change image every 2 seconds
+}

@@ -59,7 +59,24 @@
 <section id="isi">
     <section id="Home" class="Home">
                     <div class="twelve">
-                        <img src="head.png">
+                        <img class="mySlider animateSlider" src="images/slider/1.jpg">
+                        <img class="mySlider animateSlider" src="images/slider/2.jpg">
+                        <img class="mySlider animateSlider" src="images/slider/3.jpg">
+                        <img class="mySlider animateSlider" src="images/slider/4.jpg">
+                        <div class="container">
+                        <div class="row">
+                        <button class="Slider-btn" onclick="changeSlid(0)"> </button>
+                        </div>
+                        <div class="row">
+                        <button class="Slider-btn" onclick="changeSlid(1)"> </button>
+                    </div>
+                        <div class="row">
+                        <button class="Slider-btn" onclick="changeSlid(2)"> </button>
+                    </div>
+                        <div class="row">
+                        <button class="Slider-btn" onclick="changeSlid(3)"> </button>
+                    </div>
+                </div>
                     </div>
     </section>
     <div ng-controller="include_controller">
@@ -75,8 +92,11 @@
                 </center>
                     <div class="twelve columns" >
                         <div class="pictureHeroes three columns" ng-repeat="i in image | filter: myfilterBy">
-                            <img src={{i.src}}>
+                            <a><img src={{i.src}}>
+                            <div class="name"><span>{{i.name}}</span></div>
+                            </a>
                             <div class="caption">Skill :<p>{{i.skill}}</p></div>
+
                         </div>
                     </div>
             </div>
@@ -90,7 +110,14 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="js/menu.js"> </script>
+  <script src="js/modernizr.custom.97074.js"></script>
   <script src="js/style.js"></script>
   <script src="js/slider.js"></script>
+
+  <script type="text/javascript">
+	$(function() {
+		$('.pictureHeroes').each( function() { $(this).hoverdir(); } );
+	});
+    </script>
 </body>
 </html>
