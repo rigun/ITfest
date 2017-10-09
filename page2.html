@@ -8,50 +8,59 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section id="aboutUs">
   <div class="row" align="center">
-    <div class="four columns color">
-      <div class="bio">
+    <<div class="four columns color">
+      <div class="bio" >
+        <div class="backText">
+        </div>
         <img src="images/man.png">
         <div class="centerImage">
-          <div class="text">QUOTE</div>
+          <div class="text">"GOD AMONG GOD"</div>
         </div>
-        <h1 style="border-radius:0px 50px;">Rio Gunawan</h1>
-      </div>
+       </div>
+      <h1 style="border-radius:0px 50px;">Rio Gunawan</h1>
     </div>
     <div class="four columns color">
       <div class="bio">
+        <div class="backText">
+        </div>
         <img src="images/man.png">
         <div class="centerImage">
-          <div class="text">QUOTE</div>
+          <div class="text">"GOD AMONG MAN"</div>
         </div>
-        <h1 style="border-radius: 50px 50px 0px 0px;">Albertus Ari</h1>
       </div>
+     <h1 style="border-radius: 50px 50px 0px 0px;">Albertus Ari</h1>
     </div>
     <div class="four columns color">
       <div class="bio">
+        <div class="backText">
+        </div>
         <img src="images/man.png" >
         <div class="centerImage">
-          <div class="text">QUOTE</div>
+          <div class="text">"MAN"</div>
         </div>
-        <h1 style="border-radius:50px 0px;">Vian Handika</h1>
       </div>
+     <h1 style="border-radius:50px 0px;">Vian Handika</h1>
     </div>
   </div>
 </section>
 
 
-<div id="map" style="width:1800px;height:400px;background:yellow;"></div>
+<div id="map">
+    <script>
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var myLatLng = {lat: -7.779238,lng: 110.415061};
+      var mapOptions = {
+        center: new google.maps.LatLng(-7.7795657,110.4156687,17), zoom: 17
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({position:myLatLng,map: map,});
+    }
 
-<script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(-7.7784572,110.3929171,13), zoom: 20
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-</script>
+    </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
+</div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
