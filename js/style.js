@@ -1,32 +1,12 @@
 $(document).scroll(function () {
  var ukuran2 = 150;
- if($(document).scrollTop() >= 100 && $(document).scrollTop() <= ukuran2-1)
+
+ if($(document).scrollTop() > ukuran2)
  {
-     $('#site-menu').hide();
- }
- if($(document).scrollTop()==ukuran2)
- {
-     $('#site-menu').fadeIn(3000);
- }
- if ($(document).scrollTop() >= ukuran2 && $(window).width() > 750) {
-     $('#site-menu').css('position', 'fixed');
-     $('#site-menu').css('top', 0);
-     $('#isi').css('position', 'relative');
-          $('#isi').css('top', 0);
- } else if ($(document).scrollTop() >= ukuran2 && $(window).width() <= 750 ) {
-     $('#site-menu').css('position', 'fixed');
-     $('#site-menu').css('top', 0);
-     $('#isi').css('position', 'relative');
-     $('#isi').css('top', 75);
- }  else if ($(document).scrollTop() < ukuran2 && $(window).width() <= 750 ) {
-     $('#site-menu').fadeIn(3000);
-     $('#site-menu').css('position', 'static');
-     $('#isi').css('top', 0);
- } else {
- $('#site-menu').fadeIn();
-     $('#site-menu').css('position', 'static');
-     $('#isi').css('top', 0);
- }
+    $('#fixedSite-Menu').fadeIn(1000);
+}else if($(document).scrollTop() < ukuran2){
+    $('#fixedSite-Menu').fadeOut();}
+
 });
 
 $(window).ready(function () {
@@ -78,19 +58,17 @@ $('a[href^="#"]').on('click', function (e) {
  e.preventDefault();
     var target = this.hash,
     $target = $(target);
-       var scrollAmount = $target.offset().top;
+       var scrollAmount = $target.offset().top - 65;
 
  $("html, body").animate({ scrollTop: scrollAmount }, "slow");
 });
 
 $(document).scroll(function() {
- var ukuran4 = ($(document).scrollTop() / 10) * 5;
+ var ukuran4 = ($(document).scrollTop() / 100) * 105;
  if($(window).width() > 750){
-     $('#opening').css('background-position-y', 100 - ukuran4);
-     $('#bab3').css('background-position-y', 1800 - ukuran4);
+     $('#Home img').css('top', -1*ukuran4 +65);
  } else {
-     $('#opening').css('background-position-y', 100 - ukuran4);
-     $('#bab3').css('background-position-y', 1300 - ukuran4);
+     $('#Home img').css('top', -1*ukuran4+65);
  }
 })
 
@@ -287,3 +265,14 @@ var app = angular.module('appitfest', ['ngAnimate']);
 	};
 
 } )( jQuery, window );
+
+/*slider*/
+$(document).ready(function(){
+    $("#Home").mouseenter(function(){
+        $("#Home .sliderrow").fadeIn(200);
+    });
+    $("#Home").mouseleave(function(){
+        $("#Home .sliderrow").stop(true,false);
+       $("#Home .sliderrow").fadeOut();
+    });
+});

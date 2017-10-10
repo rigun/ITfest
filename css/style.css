@@ -113,7 +113,7 @@ a{
 .Home{
     position: relative;
     display: block;
-    height: 800px;
+    height: 550px;
 }
 
 #Home .teks{
@@ -125,7 +125,6 @@ a{
     width: 100%;
     position: fixed;
     align-items: center;
-    top: -65px;
     z-index: -1;
 }
 
@@ -357,8 +356,23 @@ a{
 #Home .Slider-btn
 {
     transform: scale(0.4);
-    background-color: white;
+    background-color: gray;
     margin: 0 !important;
     position: relative;
     float: right;
+}
+
+#fixedSite-Menu{
+    position: fixed !important;
+    top: 0;
+    display: none;
+}
+
+#Home .sliderrow{
+    padding: 20% 2% 0% 0% ;
+}
+
+#Home .Slider-btn:hover{
+    background-color: rgb(11, 15, 16);
+    transition-duration: 0.4s;
 }
