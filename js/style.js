@@ -64,7 +64,7 @@ $('a[href^="#"]').on('click', function (e) {
 });
 
 $(document).scroll(function() {
- var ukuran4 = ($(document).scrollTop() / 100) * 105;
+ var ukuran4 = ($(document).scrollTop() / 100) * 101.2;
  if($(window).width() > 750){
      $('#Home img').css('top', -1*ukuran4 +65);
  } else {
