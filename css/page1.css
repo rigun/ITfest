@@ -1,9 +1,14 @@
 /*page 1 style*/
 /*aboutDota*/
 
+.forReveal {
+  visibility: hidden;
+}
+
+
 #aboutDota .sub-title , .main-title{
     position: relative;
-    margin-bottom:0;
+    margin-bottom:10px;
   }
 
 #aboutDota .garis {
@@ -13,8 +18,8 @@
   width: 20%;
   height: 2px;
   background: #fff;
-  margin-top:0;
-  margin-bottom: 0;
+  margin-top:5px;
+  margin-bottom: 10px;
 
 }
 #aboutDota .main-title::after {
@@ -44,6 +49,7 @@
     background-image: url('../bg2.png');
     padding: 50px 50px;
     z-index: 1;
+    font-family: 'Poppins' !important;
 }
 #aboutDota img {
     position: static;
@@ -68,6 +74,8 @@
     height: auto;
     margin-left: 0;
     padding: 50px 0px;
+    font-family: 'Poppins' !important;
+    height: 450px;
 }
 #treasure h2{
     background-color:#f15b42;
@@ -75,25 +83,50 @@
     width:50%;
     color: white;
 }
-#treasure img{
+
+#treasure img {
+    width: 100%;
     position: relative;
-    top: 50px;
-    width: 175px;
-    margin: 25px 0;
+    align-items: center;
+    margin : 0;
+    padding: 0;
+}
+
+#treasure .icon {
+  width: 50px !important;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#treasure .color {
+    color: #ffff !important;
+}
+
+#treasure .test {
+  color: #F312;
+    background-color: #FFFF;
+    border-radius: 0;
+    -webkit-transition: border-radius 2s; /* For Safari 3.1 to 6.0 */
+    transition: border-radius 2s;
+}
+
+#treasure .test:hover {
+  color: #FFFF;
+  background : #84d0FF;
+background-blend-mode: screen;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+#treasure .seven {
+    margin:0;
 }
 
 #treasure .twelve{
     position: relative;
     color: black;
-    padding-bottom: 20px;
 }
-
-#treasure .four{
-    border-radius: 10px;
-    background-color:#786F66;
-    background-position: center;
-    color: black;
-}
-#treasure h4{
+#treasure h5{
     font-size: 20px;
+    margin:0;
 }

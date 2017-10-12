@@ -3,6 +3,8 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/page1.js"></script>
+  <link rel="stylesheet" href="css/page1.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
  </head>
 <body >
 
@@ -11,27 +13,27 @@
 
     <section id="aboutDota">
             <div class="row">
-                <div class="three columns color" >
+                <div class="three columns color forReveal" id="main">
                   <h4 class="main-title" id="mainTitle">About Dota2</h4>
                       <p style="text-align:justify">Dota2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation.
                       The game is the stand-alone sequel to Defense of the Ancients (DotA)</p>
                 </div>
 
-                <div class="three columns color row" style="text-align:center" id="gameplay">
+                <div class="three columns color forReveal" style="text-align:center" id="gameplay">
                     <img src="images/gameplay.png" class="icon" id="gameplayimage">
                     <h5 class="sub-title" id="gameplaytitle">Gameplay</h5>
                     <hr class="garis" id="gameplaygaris"></hr>
                     <p>Dota2 is played in matches between two teams of five players, with each team occupying and defending their own separate base on the map.</p>
                 </div>
 
-                <div class="three columns color" id="heroesxxx" style="text-align:center">
+                <div class="three columns color forReveal" id="heroesxxx" style="text-align:center">
                     <img src="images/heroes.png" class="icon" id="heroesimage">
                     <h5 class="sub-title" id="heroestitle">Heroes</h5>
                     <hr class="garis" id="heroesgaris"></hr>
                     <p>Dota2 features 74 heroes which are separated into groups according to their main attributes, Strength, Agility, and Intelligence. </p>
                 </div>
 
-                <div class="three columns color" style="text-align:center" id="competition">
+                <div class="three columns color forReveal" style="text-align:center" id="competition">
                     <img src="images/throphy.png" class="icon" id="competitionimage">
                     <h5 class="sub-title" id="competitiontitle">Competition</h5>
                     <hr class="garis" id="competitiongaris"></hr>
@@ -40,7 +42,37 @@
             </div>
     </section>
 
+    <section id="treasure">
+            <div class="twelve columns color">
+                <p style="text-align:center">Weeee got some new Face!</p>
+              </div>
 
+              <div class="row">
+              <div class="seven columns" style="text-align:center">
+                <img src="images/carafe.jpg">
+              </div>
+
+              <div class="two columns color">
+                <img src="images/harga.png" class="test" id="testkuntut">
+
+              </div>
+
+              <div class="three columns color">
+                <h5>Price</h5>
+                <p>Only with $2.55, you can get this treasure!</p>
+              </div>
+            </div>
+    </section>
+
+    <script type="text/javascript">
+  	$(function() {
+  		$('#gameplay , #heroesxxx , #competition, #main').each( function() { $(this).hoverdir(); } );
+  	});
+      window.sr = ScrollReveal();
+      sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
+      sr.reveal('#main', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1000, distance:'50%'});
+
+      </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

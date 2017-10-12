@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $("#gameplay").on({
         mouseenter: function(){
