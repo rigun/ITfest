@@ -340,13 +340,14 @@ a{
 }
 
 .animateSlider{
-    animation:Myslider 15s infinite}
+    animation:Myslider 14s infinite;
+    animation-direction:alternate;}
 
     @keyframes Myslider{
         0%{opacity:0}50%{opacity:1}100%{opacity:0.1}
         from{transform:scale(1);}
         to{transform:scale(1.5);
-        transition:all ease-in 0.25s;}
+        transition:all ease-out 0.25s;}
     }
 
 .hideSlider{
