@@ -56,3 +56,20 @@ function carousel() {
     t = setTimeout(carousel, 7000);
      // Change image every 2 seconds
 }
+$(document).ready(function(){
+    $("#Home").mouseenter(function(){
+        $("#Home .sliderrow").fadeIn(200);
+    });
+    $("#Home").mouseleave(function(){
+        $("#Home .sliderrow").stop(true,false);
+       $("#Home .sliderrow").fadeOut();
+    });
+});
+$(document).scroll(function() {
+ var ukuran4 = ($(document).scrollTop() / 100) * 5;
+ if($(window).width() > 750){
+     $('#Home img').css('top', ukuran4 +65);
+ } else {
+     $('#Home img').css('top', ukuran4+65);
+ }
+})

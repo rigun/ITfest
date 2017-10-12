@@ -63,14 +63,7 @@ $('a[href^="#"]').on('click', function (e) {
  $("html, body").animate({ scrollTop: scrollAmount }, "slow");
 });
 
-$(document).scroll(function() {
- var ukuran4 = ($(document).scrollTop() / 100) * 101.2;
- if($(window).width() > 750){
-     $('#Home img').css('top', -1*ukuran4 +65);
- } else {
-     $('#Home img').css('top', -1*ukuran4+65);
- }
-})
+
 
 var app = angular.module('appitfest', ['ngAnimate']);
 
@@ -127,29 +120,19 @@ var app = angular.module('appitfest', ['ngAnimate']);
 	$.HoverDir.prototype = {
 
 		_init : function( options ) {
-
 			this.options = $.extend( true, {}, $.HoverDir.defaults, options );
-
 			this.transitionProp = 'all ' + this.options.speed + 'ms ' + this.options.easing;
-
 			this.support = Modernizr.csstransitions;
-
 			this._loadEvents();
-
 		},
 		_loadEvents : function() {
-
 			var self = this;
-
 			this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
-
 				var $el = $( this ),
 					$hoverElem = $el.find( '.name' ),
 					direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
 					styleCSS = self._getStyle( direction );
-
 				if( event.type === 'mouseenter' ) {
-
 					$hoverElem.hide().css( styleCSS.from );
 					clearTimeout( self.tmhover );
 
@@ -267,12 +250,9 @@ var app = angular.module('appitfest', ['ngAnimate']);
 } )( jQuery, window );
 
 /*slider*/
-$(document).ready(function(){
-    $("#Home").mouseenter(function(){
-        $("#Home .sliderrow").fadeIn(200);
-    });
-    $("#Home").mouseleave(function(){
-        $("#Home .sliderrow").stop(true,false);
-       $("#Home .sliderrow").fadeOut();
-    });
-});
+
+if($(window).width()<=750){
+    temp = 550 - ($(window).width()/2);
+    $('.Home').css("height", temp);
+    $('.Home').css("height", temp);
+}

@@ -314,6 +314,9 @@ a{
 	display: block;
 	position: relative;
 }
+.pictureHeroes img{
+
+}
 .pictureHeroes a {
 	overflow: hidden;
 }
@@ -340,7 +343,7 @@ a{
     animation:Myslider 15s infinite}
 
     @keyframes Myslider{
-        0%{opacity:0}50%{opacity:1}100%{opacity:0}
+        0%{opacity:0}50%{opacity:1}100%{opacity:0.1}
         from{transform:scale(1);}
         to{transform:scale(1.5);
         transition:all ease-in 0.25s;}
