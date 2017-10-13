@@ -46,7 +46,7 @@
     height: 450px;
     position: static;
     box-sizing: border-box;
-    background-image: url('../bg2.png');
+    background-color: #0B0F10;
     padding: 50px 50px;
     z-index: 1;
     font-family: 'Poppins' !important;
@@ -68,25 +68,56 @@
 
 /*treasure*/
 
-#treasure{
-    background-image: url('../bg3.png');
-    background-repeat: no-repeat;
-    height: auto;
-    margin-left: 0;
-    padding: 50px 0px;
+#treasure {
+    height: 600px;
+    position: static;
+    box-sizing: border-box;
+    background-color: #0B0F10;
+    padding: 50px 50px;
+    z-index: 1;
     font-family: 'Poppins' !important;
-    height: 450px;
 }
-#treasure h2{
-    background-color:#f15b42;
-    border-radius: 10px;
-    width:50%;
-    color: white;
+
+@keyframes moveIt {
+      0% { -webkit-transform : rotateY(0deg) rotateZ(0deg)}
+      50% { -webkit-transform : rotateY(20deg) rotateZ(20deg)}
+      100% { -webkit-transform : rotateY(0deg) rotateZ(0deg)}
+}
+#treasure #keepMoving:hover {
+    animation-name: moveIt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+#treasure .circle {
+  border-width : 1px;
+  border-color: #CCC;
+  border-top: dashed;
+  border-bottom : dashed;
+  border-left: solid;
+  border-right: solid;
+  border-radius: 50%;
+  display: inline-flex;
+}
+/*25 30*/
+#treasure .inner {
+  background-color: white;
+  border-radius: 50%;
+  margin: 4.5px;
+  height: 60px;
+  width: 60px;
+}
+
+#treasure .text-title {
+  padding: 0 !important;
+  margin : 0 !important;
 }
 
 #treasure img {
     width: 100%;
-    position: relative;
+    position: static;
     align-items: center;
     margin : 0;
     padding: 0;
@@ -118,14 +149,11 @@ background-blend-mode: screen;
   border-radius: 50%;
 }
 
-#treasure .seven {
-    margin:0;
+#treasure h1 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
-#treasure .twelve{
-    position: relative;
-    color: black;
-}
 #treasure h5{
     font-size: 20px;
     margin:0;
