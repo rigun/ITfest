@@ -6,61 +6,80 @@
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="aboutUs">
-  <div class="row" align="center">
-    <<div class="four columns color">
-      <div class="bio" >
-        <div class="backText">
-        </div>
-        <img src="images/man.png">
-        <div class="centerImage">
-          <div class="text">"GOD AMONG GOD"</div>
-        </div>
-       </div>
-      <h1 style="border-radius:0px 50px;">Rio Gunawan</h1>
+<section id="ourOpinion">
+  <center>
+  <h1 class="title">Our Opinion</h1>
+  <div class="row">
+    <!--div class="two columns color"><img class="wing" src="wingLeft.png"></div-->
+    <!--div class="eight columns color"-->
+    <div>
+      <p class="text">DOTA 2 is the best MOBA game ever on Steam, because Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has truly taken on a life of its own.</p>
+      <button class="btnLike"><h5> LIKE </h5></button>
     </div>
+    <!--div class="two columns color"><img class="wing" src="wingRight.png"></div-->
+  </div>
+  </center>
+</section>
+
+<section id="aboutUs">
+  <center><h1 class="title">About US</h1></center>
+  <div class="row" align="center">
+  <div class="twelve columns">
     <div class="four columns color">
       <div class="bio">
         <div class="backText">
         </div>
-        <img src="images/man.png">
+        <img src="images/pictUs/Ari.jpg">
         <div class="centerImage">
           <div class="text">"GOD AMONG MAN"</div>
         </div>
       </div>
-     <h1 style="border-radius: 50px 50px 0px 0px;">Albertus Ari</h1>
+    <h3 class="name" style="border-radius:0px 50px;">Albertus Ari</h3>
+    </div>
+    <div class="four columns color">
+      <div class="bio" >
+        <div class="backText">
+        </div>
+        <img src="images/pictUs/rio.jpg">
+        <div class="centerImage">
+          <div class="text">"GOD AMONG GOD"</div>
+        </div>
+       </div>
+      <h3 class="name" style="border-radius: 50px 50px 0px 0px;">Rio Gunawan</h3>
     </div>
     <div class="four columns color">
       <div class="bio">
         <div class="backText">
         </div>
-        <img src="images/man.png" >
+        <img src="images/pictUs/Vian.jpg" >
         <div class="centerImage">
           <div class="text">"MAN"</div>
         </div>
       </div>
-     <h1 style="border-radius:50px 0px;">Vian Handika</h1>
+     <h3 class="name" style="border-radius:50px 0px;">Vian Handika</h3>
     </div>
+  </div>
   </div>
 </section>
 
-
-<div id="map">
+<section id="map">
     <script>
     function myMap() {
       var mapCanvas = document.getElementById("map");
-      var myLatLng = {lat: -7.779238,lng: 110.415061};
+      var myLatLng = {lat: -7.779355,lng: 110.415776};
       var mapOptions = {
-        center: new google.maps.LatLng(-7.7795657,110.4156687,17), zoom: 17
+        center: new google.maps.LatLng(-7.779355, 110.415776,17), zoom: 17
       };
       var map = new google.maps.Map(mapCanvas, mapOptions);
       var marker = new google.maps.Marker({position:myLatLng,map: map,});
     }
-
     </script>
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
-</div>
+</section>
+
+<section id="contact">
+  <h1>TEST</h1>
+</section>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

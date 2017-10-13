@@ -1,7 +1,43 @@
+
+#ourOpinion {
+	background-image: url('../bg4.png');
+	height: auto;
+  width: auto;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white; !important
+}
+
+#ourOpinion .title{
+  padding-top: 2%;
+}
+
+#ourOpinion .text{
+  padding: 0% 1% 2% 1%;
+	margin: 0% 15%;
+	font-size: 20px;
+}
+
+#ourOpinion .btnLike{
+	width: auto;
+	min-width: 200px;
+	border: 2px solid white;
+	background-color: green;
+}
+
+#ourOpinion .wing{
+	width: auto;
+	height: auto;
+	max-width: 300px;
+	max-height: 150px;
+}
+
 #aboutUs .bio{
 	position:relative;
-  height:300px;
-  width:300px;
+  height:250px;
+  width:250px;
   border-radius:50%;
   background-color: black;
   opacity: 1;
@@ -10,12 +46,12 @@
 
 #aboutUs .backText{
   position: absolute;
-  height:320px;
-  width:320px;
+  height:270px;
+  width:270px;
   border-radius:50%;
   //padding: 0px 5px 0px 0px;
-  background-color: black;
-  opacity: 0.6;
+  background-color: white;
+  opacity: 0.3;
   top:-10px;
   left:-10px;
 }
@@ -25,14 +61,14 @@
   width:100%;
   height:300px;
   background:yellow;
-  margin-bottom: 50px;
+  border-bottom: 1000px;
 
 }
 
 #aboutUs img{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     padding: 0px 0px 0px 0px;
     transition: .5s ease;
     border-radius:50%;
@@ -40,11 +76,21 @@
     display: block;
 }
 
-#aboutUs h1{
-    width: 300px;
-    background-color: white ;
+#aboutUs .name{
+    width: auto;
+		max-width:350px;
+ // background-color: white ;
+    border:2px solid white;
     padding: 4px;
+    transition: .5s ease;
     margin-top: 20px;
+}
+
+#aboutUs .name:hover{
+  background-color: white ;
+  transition: .5s ease;
+  text-shadow: 0 0 3px #FF0000;
+  color:black;
 }
 
 #aboutUs .centerImage {
@@ -58,9 +104,8 @@
 }
 
 #aboutUs .bio:hover img{
-  opacity: 0.5;
+  opacity: 0.3;
 }
-
 
 #aboutUs .bio:hover .centerImage {
   opacity: 1;
@@ -75,5 +120,17 @@
 }
 
 #aboutUs {
-  margin: 140px;
+  height: auto;
+  width: auto;
+  padding: 5% 4%;
+  background-color: #0B0F10;
+  color: white; !important
 }
+
+#aboutUs .title {
+  position: relative;
+  margin-top:-4%;
+  margin-bottom: 4%;
+}
+
+#contact {}
