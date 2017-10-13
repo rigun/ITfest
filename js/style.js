@@ -256,3 +256,10 @@ if($(window).width()<=750){
     $('.Home').css("height", temp);
     $('.Home').css("height", temp);
 }
+
+$(function() {
+    $('.pictureHeroes').each( function() { $(this).hoverdir(); } );
+});
+
+window.sr = ScrollReveal();
+sr.reveal('.heroes .container', {origin: 'left', rotate: {x:0, y:0, z:-90}, duration: 1000});

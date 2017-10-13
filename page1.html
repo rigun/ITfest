@@ -68,16 +68,14 @@
             </div>
     </section>
 
-    <script type="text/javascript">
-  	$(function() {
-  		$('#gameplay , #heroesxxx , #competition, #main').each( function() { $(this).hoverdir(); } );
-  	});
-      window.sr = ScrollReveal();
-      sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
-      sr.reveal('#main', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1000, distance:'50%'});
 
-      </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+<script type="text/javascript">
+  window.sr = ScrollReveal();
+  sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
+  sr.reveal('#main', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1000, distance:'50%'});
+
+  </script>
 </html>
