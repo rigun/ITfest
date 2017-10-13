@@ -87,8 +87,6 @@
     animation-name: moveIt;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
 }
 
 #treasure .circle {
