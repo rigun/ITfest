@@ -261,5 +261,5 @@ $(function() {
     $('.pictureHeroes').each( function() { $(this).hoverdir(); } );
 });
 
-window.sr = ScrollReveal();
-sr.reveal('.heroes .container', {origin: 'left', rotate: {x:0, y:0, z:-90}, duration: 1000});
+window.st = ScrollReveal();
+st.reveal('.heroes .container', {origin: 'left', rotate: {x:0, y:0, z:-90}, duration: 1000});
