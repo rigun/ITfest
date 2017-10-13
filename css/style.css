@@ -121,13 +121,20 @@ a{
         top:110px;
 }
 
-#Home img {
+#Home .mySlider {
     width: 100%;
     position: fixed;
     align-items: center;
     z-index: -1;
 }
-
+#Home .content{
+    padding-top:5%;
+    color: white;
+}
+#Home .logo{
+    transform: scale(0.6);
+    align-items: center;
+}
 #Home .bg1{
         width:300px;
         height:55px;
@@ -137,7 +144,41 @@ a{
         position: relative;
         top: 15px;
 }
+.animateSlider{
+    animation:Myslider 14s infinite;
+    animation-direction:alternate;}
 
+    @keyframes Myslider{
+        0%{opacity:0}50%{opacity:1}100%{opacity:0.1}
+        from{transform:scale(1);}
+        to{transform:scale(1.5);
+        transition:all ease-out 0.25s;}
+    }
+
+
+#Home .Slider-btn
+{
+    transform: scale(0.4);
+    background-color: gray;
+    margin: 0 !important;
+    position: relative;
+    float: right;
+}
+#Home .sliderrow{
+    position: relative;
+    top: 100px;
+}
+
+#Home .Slider-btn:hover{
+    background-color: rgb(11, 15, 16);
+    transition-duration: 0.4s;
+}
+#Home .TextSliderTwo{
+    display:block;
+}
+#Home .TextSliderTwo{
+    display:none;
+}
 #Home2 {
     height: 810px;
 }
@@ -231,67 +272,6 @@ a{
 .pictureHeroes.ng-leave {
   animation: 1s linear deleted;
 }
-/*page 1 style*/
-/*aboutDota*/
-
-#aboutDota{
-    height: 450px;
-    position: static;
-    box-sizing: border-box;
-    background-image: url('../bg2.png');
-    padding: 50px 50px;
-    z-index: 1;
-}
-#aboutDota img {
-    position: static;
-    width: 200px;
-    height: 350px;
-}
-
-#aboutDota .color {
-    color: #ffff !important;
-}
-
-/*treasure*/
-
-#treasure{
-    background-image: url('../bg3.png');
-    background-repeat: no-repeat;
-    height: auto;
-    margin-left: 0;
-    padding: 50px 0px;
-}
-#treasure h2{
-    background-color:#f15b42;
-    border-radius: 10px;
-    width:50%;
-    color: white;
-}
-#treasure img{
-    position: relative;
-    top: 50px;
-    width: 175px;
-    margin: 25px 0;
-}
-
-#treasure .twelve{
-    position: relative;
-    color: black;
-    padding-bottom: 20px;
-}
-
-#treasure .four{
-    border-radius: 10px;
-    background-color:#786F66;
-    background-position: center;
-    color: black;
-}
-#treasure h4{
-    font-size: 20px;
-}
-
-/*Page 2*/
-
 #aboutUs .circleImage{
     width: 10%;
     height: 10%;
@@ -339,32 +319,6 @@ a{
 	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
 }
 
-.animateSlider{
-    animation:Myslider 14s infinite;
-    animation-direction:alternate;}
-
-    @keyframes Myslider{
-        0%{opacity:0}50%{opacity:1}100%{opacity:0.1}
-        from{transform:scale(1);}
-        to{transform:scale(1.5);
-        transition:all ease-out 0.25s;}
-    }
-
-.hideSlider{
-    display:none;
-}
-.showSlider{
-    display:block;
-}
-
-#Home .Slider-btn
-{
-    transform: scale(0.4);
-    background-color: gray;
-    margin: 0 !important;
-    position: relative;
-    float: right;
-}
 
 #fixedSite-Menu{
     position: fixed !important;
@@ -372,11 +326,6 @@ a{
     display: none;
 }
 
-#Home .sliderrow{
-    padding: 20% 2% 0% 0% ;
-}
 
-#Home .Slider-btn:hover{
-    background-color: rgb(11, 15, 16);
-    transition-duration: 0.4s;
-}
+
+.heroes .container { visibility: hidden; }

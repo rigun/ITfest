@@ -4,8 +4,10 @@ for (i = 0; i < x.length; i++) {
    x[i].style.display = "none";
 }
 var tamp=0;
-carousel();
 var temp=".activeOne";
+var temp2=".TextSliderOne";
+carousel();
+
 function changeSlid(n){
     var i,t;
     var x = document.getElementsByClassName("mySlider");
@@ -19,18 +21,30 @@ function changeSlid(n){
         $(temp).css("background-color","gray");
         $('.activeOne').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeOne";
+        $(temp2).css("display","none");
+        $('.TextSliderOne').css("display","block");
+        temp2=".TextSliderOne";
     }else if(myIndex == 1){
         $(temp).css("background-color","gray");
         $('.activeTwo').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeTwo";
+        $(temp2).css("display","none");
+        $('.TextSliderTwo').css("display","block");
+        temp2=".TextSliderTwo";
     }else if(myIndex == 2){
         $(temp).css("background-color","gray");
         $('.activeThree').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeThree";
+        $(temp2).css("display","none");
+        $('.TextSliderOne').css("display","block");
+        temp2=".TextSliderOne";
     }else if(myIndex == 3){
         $(temp).css("background-color","gray");
         $('.activeFour').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeFour";
+        $(temp2).css("display","none");
+        $('.TextSliderTwo').css("display","block");
+        temp2=".TextSliderTwo";
     }
 }
 function carousel() {
@@ -40,26 +54,39 @@ function carousel() {
     if (myIndex > x.length) {
         myIndex = 1
         for (i = 0; i < x.length; i++) {
+           x[i].style.animationPlayState="initial";
            x[i].style.display = "none";
         }}
 
-    if(myIndex == 1){
-        $(temp).css("background-color","gray");
-        $('.activeOne').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
-        temp=".activeOne";
-    }else if(myIndex == 2){
-        $(temp).css("background-color","gray");
-        $('.activeTwo').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
-        temp=".activeTwo";
-    }else if(myIndex == 3){
-        $(temp).css("background-color","gray");
-        $('.activeThree').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
-        temp=".activeThree";
-    }else if(myIndex == 4){
-        $(temp).css("background-color","gray");
-        $('.activeFour').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
-        temp=".activeFour";
-    }
+        if(myIndex == 1){
+            $(temp).css("background-color","gray");
+            $('.activeOne').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
+            temp=".activeOne";
+            $(temp2).css("display","none");
+            $('.TextSliderOne').css("display","block");
+            temp2=".TextSliderOne";
+        }else if(myIndex == 2){
+            $(temp).css("background-color","gray");
+            $('.activeTwo').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
+            temp=".activeTwo";
+            $(temp2).css("display","none");
+            $('.TextSliderTwo').css("display","block");
+            temp2=".TextSliderTwo";
+        }else if(myIndex == 3){
+            $(temp).css("background-color","gray");
+            $('.activeThree').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
+            temp=".activeThree";
+            $(temp2).css("display","none");
+            $('.TextSliderOne').css("display","block");
+            temp2=".TextSliderOne";
+        }else if(myIndex == 4){
+            $(temp).css("background-color","gray");
+            $('.activeFour').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
+            temp=".activeFour";
+            $(temp2).css("display","none");
+            $('.TextSliderTwo').css("display","block");
+            temp2=".TextSliderTwo";
+        }
 
     x[myIndex-1].style.display = "block";
 
