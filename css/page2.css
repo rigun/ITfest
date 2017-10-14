@@ -110,25 +110,12 @@
   margin: 5px 2px;
 }
 
-#aboutUs .fa:hover {
-		transition: .5s ease;
-}
+#aboutUs .fa:hover {transition: .5s ease;}
 
-#aboutUs .fa-facebook:hover{
-	color:#458eff;
-}
-
-#aboutUs .fa-instagram:hover{
-	color:#fb3958;
-}
-
-#aboutUs .fa-twitter:hover {
-	color:#1da1f2;
-}
-
-#aboutUs .fa-google-plus:hover{
-	color:#d34836;
-}
+#aboutUs .fa-facebook:hover{color:#458eff;}
+#aboutUs .fa-instagram:hover{color:#fb3958;}
+#aboutUs .fa-twitter:hover {color:#1da1f2;}
+#aboutUs .fa-google-plus:hover{color:#d34836;}
 
 #aboutUs .emailBtn:hover{
   color:#1da1f2;
