@@ -84,6 +84,7 @@
     padding: 4px;
     transition: .5s ease;
     margin-top: 20px;
+		margin-bottom: 10px;
 }
 
 #aboutUs .name:hover{
@@ -91,6 +92,57 @@
   transition: .5s ease;
   text-shadow: 0 0 3px #FF0000;
   color:black;
+}
+
+
+#aboutUs .socialBtn{
+	width: auto;
+	height: auto;
+	font-size: 30px;
+	padding-bottom: 1%;
+}
+
+#aboutUs .fa {
+  padding: 0% 2%;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+#aboutUs .fa:hover {
+		transition: .5s ease;
+}
+
+#aboutUs .fa-facebook:hover{
+	color:#458eff;
+}
+
+#aboutUs .fa-instagram:hover{
+	color:#fb3958;
+}
+
+#aboutUs .fa-twitter:hover {
+	color:#1da1f2;
+}
+
+#aboutUs .fa-google-plus:hover{
+	color:#d34836;
+}
+
+#aboutUs .emailBtn:hover{
+  color:#1da1f2;
+	transition: 0.5s ease;
+}
+
+#aboutUs .emailBtn{
+	transition: 0.5s ease;
+	margin-bottom: 10%;
+}
+
+#aboutUs .fa-paper-plane-o {
+	width:auto;
+	padding: 0% 1%;
 }
 
 #aboutUs .centerImage {
