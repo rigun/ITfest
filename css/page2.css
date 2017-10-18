@@ -34,7 +34,7 @@
 	max-height: 150px;
 }
 
-#aboutUs .bio{
+#aboutUs .pict{
 	position:relative;
   height:250px;
   width:250px;
@@ -87,7 +87,7 @@
 		margin-bottom: 10px;
 }
 
-#aboutUs .name:hover{
+#aboutUs .nameOn{
   background-color: white ;
   transition: .5s ease;
   text-shadow: 0 0 3px #FF0000;
@@ -142,11 +142,11 @@
   -ms-transform: translate(-50%, -50%)
 }
 
-#aboutUs .bio:hover img{
+#aboutUs .pict:hover img{
   opacity: 0.3;
 }
 
-#aboutUs .bio:hover .centerImage {
+#aboutUs .pict:hover .centerImage {
   opacity: 1;
 }
 
