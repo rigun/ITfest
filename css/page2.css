@@ -11,7 +11,7 @@
 }
 
 #ourOpinion .title{
-  padding-top: 2%;
+  padding: 1.5%;
 }
 
 #ourOpinion .text{
@@ -34,7 +34,126 @@
 	max-height: 150px;
 }
 
-#aboutUs .pict{
+#ourOpinion .pict{
+	right: -25%;
+}
+
+#ourOpinion .quoteIcon{
+	position: absolute;
+	top: -11px;
+	right: -2px;
+	font-size: 250%;
+	color: #00c282;
+}
+
+#ourOpinion .job{
+	display: inline-block;
+	font-style: italic;
+	font-weight: bold;
+	color:#00c282;
+}
+
+#ourOpinion .twelve {
+	padding-bottom: 5%;
+}
+
+#ourOpinion .quote {
+	height: auto;
+	margin-bottom: 11%;
+}
+
+#ourOpinion .name{
+	display: inline-block;
+	line-height: 24px;
+	font-weight: bold;
+	margin-right: 2%;
+}
+
+#ourOpinion .content{
+	text-align:left;
+}
+
+#ourOpinion .pict:hover .quoteIcon{
+	color:black;
+	transition: .5s ease;
+}
+
+
+
+.slides {display:none}
+
+#ourOpinion .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#ourOpinion .prev, .next {
+  cursor: pointer;
+	position: sticky;
+  top: 50%;
+	font-weight: bold;
+	font-size: 150px;
+	width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #00c282;
+  transition: 0.6s ease;
+  border-radius: 50%;
+	z-index: +1;
+}
+
+#ourOpinion .prev:hover, .next:hover {
+  color: white;
+	transition: 0.6s ease;
+}
+
+#ourOpinion .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .pict{
 	position:relative;
   height:250px;
   width:250px;
@@ -44,7 +163,7 @@
 }
 
 
-#aboutUs .backText{
+ .backText{
   position: absolute;
   height:270px;
   width:270px;
@@ -65,7 +184,7 @@
 
 }
 
-#aboutUs img{
+.imgRounded{
     position: relative;
     width: 250px;
     height: 250px;
@@ -132,7 +251,7 @@
 	padding: 0% 1%;
 }
 
-#aboutUs .centerImage {
+.centerImage {
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -142,11 +261,11 @@
   -ms-transform: translate(-50%, -50%)
 }
 
-#aboutUs .pict:hover img{
+ .pict:hover .imgRounded{
   opacity: 0.3;
 }
 
-#aboutUs .pict:hover .centerImage {
+.pict:hover .centerImage {
   opacity: 1;
 }
 
