@@ -84,6 +84,19 @@
       50% { -webkit-transform : rotateY(20deg) rotateZ(20deg)}
       100% { -webkit-transform : rotateY(0deg) rotateZ(0deg)}
 }
+
+@keyframes example {
+    from {background-color: white;}
+    to {background-color: green;}
+}
+
+
+@keyframes out {
+    from {background-color: green;}
+    to {background-color: white;}
+}
+
+
 #treasure #keepMoving:hover {
     animation-name: moveIt;
     animation-duration: 2s;
@@ -109,6 +122,11 @@
   height: 60px;
   width: 60px;
   padding: 0px !important;
+}
+
+#dayumtest:hover {
+  transition: .5 ease;
+  background-color: green;
 }
 
 #treasure .text-title {
@@ -160,4 +178,9 @@ td {
 
 td.padL {
   padding-left: 0px !important;
+}
+
+/* Battle Pass */
+#battlepass .three.columns {
+  width: 25% !important;
 }

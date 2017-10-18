@@ -56,3 +56,18 @@ $(document).ready(function(){
         },
     });
 });
+
+$(document).ready(function() {
+    $("#dayumtest").on({
+      mouseenter : function() {
+        $("#dayumtest").css({"animation-name":"example", "animation-duration":"1.5s"});
+
+      },
+
+      mouseleave : function() {
+        $("#dayumtest").stop(true,true);
+        $("#dayumtest").css({"animation-name":"out", "animation-duration":"1s"});
+      },
+
+    });
+});
