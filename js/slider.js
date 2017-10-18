@@ -3,7 +3,7 @@ var x = document.getElementsByClassName("mySlider");
 for (i = 0; i < x.length; i++) {
    x[i].style.display = "none";
 }
-var tamp=0;
+var tamp=1;
 var temp=".activeOne";
 var temp2=".TextSliderOne";
 carousel();
@@ -36,27 +36,24 @@ function changeSlid(n){
         $('.activeThree').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeThree";
         $(temp2).css("display","none");
-        $('.TextSliderOne').css("display","block");
-        temp2=".TextSliderOne";
+        $('.TextSliderThree').css("display","block");
+        temp2=".TextSliderThree";
     }else if(myIndex == 3){
         $(temp).css("background-color","gray");
         $('.activeFour').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
         temp=".activeFour";
         $(temp2).css("display","none");
-        $('.TextSliderTwo').css("display","block");
-        temp2=".TextSliderTwo";
+        $('.TextSliderFour').css("display","block");
+        temp2=".TextSliderFour";
     }
 }
 function carousel() {
     var i,t;
 
     myIndex+=1;
+
     if (myIndex > x.length) {
-        myIndex = 1
-        for (i = 0; i < x.length; i++) {
-           x[i].style.animationPlayState="initial";
-           x[i].style.display = "none";
-        }}
+        myIndex = 1}
 
         if(myIndex == 1){
             $(temp).css("background-color","gray");
@@ -65,6 +62,8 @@ function carousel() {
             $(temp2).css("display","none");
             $('.TextSliderOne').css("display","block");
             temp2=".TextSliderOne";
+            x[tamp].style.display = "none";
+            tamp = 3;
         }else if(myIndex == 2){
             $(temp).css("background-color","gray");
             $('.activeTwo').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
@@ -72,20 +71,26 @@ function carousel() {
             $(temp2).css("display","none");
             $('.TextSliderTwo').css("display","block");
             temp2=".TextSliderTwo";
+            x[tamp].style.display = "none";
+            tamp = 0;
         }else if(myIndex == 3){
             $(temp).css("background-color","gray");
             $('.activeThree').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
             temp=".activeThree";
             $(temp2).css("display","none");
-            $('.TextSliderOne').css("display","block");
-            temp2=".TextSliderOne";
+            $('.TextSliderThree').css("display","block");
+            temp2=".TextSliderThree";
+            x[tamp].style.display = "none";
+            tamp = 1;
         }else if(myIndex == 4){
             $(temp).css("background-color","gray");
             $('.activeFour').css({"background-color" : "rgb(11, 15, 16)", "transition-duration": "0.4s"});
             temp=".activeFour";
             $(temp2).css("display","none");
-            $('.TextSliderTwo').css("display","block");
-            temp2=".TextSliderTwo";
+            $('.TextSliderFour').css("display","block");
+            temp2=".TextSliderFour";
+            x[tamp].style.display = "none";
+            tamp = 2;
         }
 
     x[myIndex-1].style.display = "block";

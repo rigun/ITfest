@@ -92,7 +92,9 @@ var app = angular.module('appitfest', ['ngAnimate']);
         $scope.image = $scope.Myimages;
         $scope.myfilterBy="";
         $scope.filterBy = function(x) {
-
+            $(function() {
+                $('.pictureHeroes').each( function() { $(this).hoverdir(); } );
+            });
         $scope.myfilterBy = x;
     }
     }]);
@@ -249,6 +251,7 @@ var app = angular.module('appitfest', ['ngAnimate']);
 
 } )( jQuery, window );
 
+/*mouse-move*/
 /*slider*/
 
 if($(window).width()<=750){
