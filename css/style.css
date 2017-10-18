@@ -169,13 +169,12 @@ a{
 }
 .animateSlider{
     animation:Myslider 14s infinite;
-    animation-direction:alternate;}
+}
 
     @keyframes Myslider{
-        0%{opacity:0}50%{opacity:1}100%{opacity:0.1}
+        0%{opacity:0}50%{opacity:0.6}100%{opacity:0}
         from{transform:scale(1);}
-        to{transform:scale(1.5);
-        transition:all ease-out 0.25s;}
+        to{transform:scale(1.5);}
     }
 
 
@@ -196,11 +195,37 @@ a{
     background-color: rgb(11, 15, 16);
     transition-duration: 0.4s;
 }
-#Home .TextSliderTwo{
-    display:block;
-}
-#Home .TextSliderTwo{
+#Home .TextSliderThree{
     display:none;
+}
+#Home .TextSliderFour {
+        display:none;
+    }
+#Home .TextSliderTwo {
+    display:none;
+    animation:TextSliderTwo 6s 1;
+    position: relative;
+    }
+
+@keyframes TextSliderTwo{
+0%{opacity:0}50%{opacity:0.5}100%{opacity:1}
+from{top : 100px}to{top: 0px; transition:all ease-out 0.25s;}
+}
+#Home .TextSliderOne .partSlider{
+    animation:TextSliderOne 6s 1;
+    position: relative;
+    }
+    #Home .content{
+        color: #ACB4B9 !important;
+    }
+
+@keyframes TextSliderOne{
+0%{opacity:0}50%{opacity:0.5}100%{opacity:1}
+from{top : 100px;
+    transform:rotateY(150deg);}
+to{top: 0px;
+    transform:rotateY(0deg);
+     transition:all ease-out 0.25s;}
 }
 #Home2 {
     height: 810px;
