@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/page1.js"></script>
   <link rel="stylesheet" href="css/page1.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
   <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
   <script src="bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
  </head>
@@ -14,7 +12,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <section id="aboutDota">
-            <div class="row">
+            <div class="row" style="margin-top:5%;margin-left:5%">
                 <div class="three columns color forReveal" id="main">
                   <h4 class="main-title" id="mainTitle">About Dota2</h4>
                       <p style="text-align:justify">Dota2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation.
@@ -54,23 +52,38 @@
               <div class="seven columns" style="text-align:center">
                 <img src="images/carafe.png" id="keepMoving">
               </div>
-              <!--
-              <div class="two columns color" style="text-align:right">
-
-                <div class="circle">
-                    <img src="images/harga.png" class="inner">
-                </div>
-
-              </div>
-
-              <div class="three columns color" style="padding-left:15px">
-                <h5>Price</h5>
-                <p>Only with $2.55, you can get this treasure!</p>
-              </div>-->
 
               <div class="five columns color">
                 <table class="u-full-width">
-                <tr>
+
+                <tr id="item">
+                  <td style="text-align:right"> <!--inget ganti pake absolute -->
+                    <div class="circle">
+                        <img src="images/harga.png" class="inner">
+                    </div>
+                  </td>
+
+                  <td class="padL">
+                    <h5>Item Debut</h5>
+                    <p>Only with $2.55, you can get this treasure!</p>
+                  </td>
+                </tr>
+
+                <tr id="part">
+                  <td style="text-align:right">
+
+                    <div class="circle">
+                        <img src="images/harga.png" class="inner" id="dayumtest">
+                    </div>
+                  </td>
+
+                  <td class="padL">
+                    <h5>Part of The International</h5>
+                    <p>Only with $2.55, you can get this treasure!</p>
+                  </td>
+                </tr>
+
+                <tr id="rare">
                   <td style="text-align:right">
                     <div class="circle">
                         <img src="images/harga.png" class="inner">
@@ -78,38 +91,12 @@
                   </td>
 
                   <td class="padL">
-                    <h5>Price</h5>
-                    <p>Only with $2.55, you can get this treasure!</p>
+                    <h5>Chance for Rare</h5>
+                    <p>Win a chance for Golden Immortal!</p>
                   </td>
                 </tr>
 
-                <tr>
-                  <td style="text-align:right">
-                    <div class="circle">
-                        <img src="images/harga.png" class="inner">
-                    </div>
-                  </td>
-
-                  <td class="padL">
-                    <h5>Price</h5>
-                    <p>Only with $2.55, you can get this treasure!</p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="text-align:right">
-                    <div class="circle">
-                        <img src="images/harga.png" class="inner">
-                    </div>
-                  </td>
-
-                  <td class="padL">
-                    <h5>Price</h5>
-                    <p>Only with $2.55, you can get this treasure!</p>
-                  </td>
-                </tr>
-
-                <tr>
+                <tr id="price">
                   <td style="text-align:right">
                     <div class="circle">
                         <img src="images/harga.png" class="inner">
@@ -128,11 +115,33 @@
             </div>
     </section>
 
+    <section id="battlepass">
+
+      <div class="row">
+        <div class="three columns" style="background-color:white">
+          <img src="images/fall.png">
+        </div>
+
+        <div class="three columns" style="background-color:blue">
+          <img src="images/fall.png">
+        </div>
+
+        <div class="three columns" style="background-color:green">
+          <img src="images/fall.png">
+        </div>
+
+        <div class="three columns" style="background-color:purple">
+          <img src="images/fall.png">
+        </div>
+      </div>
+    </section>
+
     <script type="text/javascript">
 
       window.sr = ScrollReveal();
       sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
       sr.reveal('#main', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1000, distance:'50%'});
+      sr.reveal('#item, #part, #rare, #price', {scale:0.1, viewOffset: { bottom: 65 }, duration: 1000});
 
       </script>
 <!-- End Document
