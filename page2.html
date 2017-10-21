@@ -160,45 +160,21 @@
   </div>
 </section>
 
-<section id="map">
-    <script>
-    function myMap() {
-      var mapCanvas = document.getElementById("map");
-      var myLatLng = {lat: -7.779355,lng: 110.415776};
-      var mapOptions = {
-        center: new google.maps.LatLng(-7.779355, 110.415776,17), zoom: 17
-      };
-      var map = new google.maps.Map(mapCanvas, mapOptions);
-      var marker = new google.maps.Marker({position:myLatLng,map: map,});
-    }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
+<section id="map"></section>
+
+
+<section id="endWeb">
+
+<center>
+  <h2>Specially Presented For</h2>
+  <img class="icons" src="images/logo/IC_2017.png"><img class="icons" src="images/logo/X_Project.png">
+  <hr style="border-top-width: 3px;margin-top:0px;margin-bottom:5px;"></hr>
+  <h6 class="copyRight">Copyright <i class="fa fa-copyright"></i> 2017 CBIS->Gen. All rights reserved</h6>
+</center>
 </section>
 
-<section id="contact">
-  <h1>TEST</h1>
-</section>
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("slides");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      slides[slideIndex-1].style.display = "block";
-    }
-</script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
 </html>
