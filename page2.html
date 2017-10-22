@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/page2.js"></script>
+  <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+  <script src="bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
 </head>
 <body >
 
@@ -85,28 +87,28 @@
   <div class="row" align="center">
   <div class="twelve columns">
     <div class="four columns color">
-      <div class="pict ari">
+      <div class="pict ari" >
         <div class="backText">
         </div>
         <img class="imgRounded" src="images/pictUs/Ari.jpg">
         <div class="centerImage">
           <div class="text">"GOD AMONG MAN"</div>
         </div>
+       </div>
+      <div class="content">
+        <h3 class="name ariName" style="border-radius: 50px 50px 0px 0px;">Albertus Ari</h3>
+        <div class="socialBtn">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google-plus"></a>
+        </div>
+        <div class="emailBtn">
+            <a href="mailto:CBIS_NextGeneration@gmail.com" class="fa fa-paper-plane-o">
+              <u style="font-family:'Poppins'">CBIS_NextGeneration@gmail.com</u>
+            </a>
+        </div>
       </div>
-    <div class="content">
-      <h3 class="name ariName" style="border-radius:0px 50px;">Albertus Ari</h3>
-      <div class="socialBtn">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-instagram"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-google-plus"></a>
-      </div>
-      <div class="emailBtn">
-          <a href="mailto:CBIS_NextGeneration@gmail.com" class="fa fa-paper-plane-o">
-            <u style="font-family:'Poppins'">CBIS_NextGeneration@gmail.com</u>
-          </a>
-      </div>
-    </div>
     </div>
     <div class="four columns color">
       <div class="pict rio" >
@@ -157,21 +159,33 @@
      </div>
     </div>
   </div>
-  </div>
+</div>
 </section>
+
+
 
 <section id="map"></section>
 
-
 <section id="endWeb">
-
 <center>
-  <h2>Specially Presented For</h2>
-  <img class="icons" src="images/logo/IC_2017.png"><img class="icons" src="images/logo/X_Project.png">
+  <h2>Specially Presented For :</h2>
+  <img class="icons IC" src="images/logo/IC_2017.png"><img class="icons XP" src="images/logo/X_Project.png">
   <hr style="border-top-width: 3px;margin-top:0px;margin-bottom:5px;"></hr>
   <h6 class="copyRight">Copyright <i class="fa fa-copyright"></i> 2017 CBIS->Gen. All rights reserved</h6>
 </center>
 </section>
+
+<script type="text/javascript">
+
+  window.sr = ScrollReveal();
+  //sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
+  sr.reveal('#aboutUs .ari,#aboutUs .socialBtn,.IC, #ourOpinion .prev', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1500, distance:'80%'});
+  sr.reveal('#aboutUs .vian,#aboutUs .emailBtn,.XP, #ourOpinion .next', {origin: 'right', rotate: {x:0, y:0, z:0}, duration: 1500, distance:'80%'});
+  //sr.reveal('#aboutUs ', {origin: 'top', rotate: {x:0, y:0, z:0}, duration: 1500, distance:'80%'});
+  sr.reveal('#aboutUs .rio, #aboutUs .name', {origin: 'bottom', rotate: {x:0, y:0, z:0}, duration: 1500, distance:'80%'});
+  //sr.reveal('#item, #part, #rare, #price', {scale:0.1, viewOffset: { bottom: 65 }, duration: 1000});
+
+</script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

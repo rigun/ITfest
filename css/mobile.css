@@ -1,4 +1,72 @@
 /* Larger than mobile */
+@media screen and (max-width: 1210px){
+  #aboutUs .socialBtn .fa {
+    width:40px;
+  }
+}
+@media screen and (max-width: 1055px){
+  #ourOpinion .quote {
+  	font-size: 20px;
+  }
+  #ourOpinion .name{
+  	font-size: 20px;
+  }
+  #ourOpinion .job{
+    font-size: 12px;
+  }
+  #ourOpinion .prev, .next {
+    font-size: 120px;
+  }
+
+  .pict{
+   height:150px;
+   width:150px;
+ }
+
+  .backText{
+   height:170px;
+   width:170px;
+ }
+
+ .imgRounded{
+     width: 150px;
+     height: 150px;
+ }
+
+ #aboutUs .name{
+     max-width:250px;
+     font-size: 20px;
+ }
+
+ #aboutUs .emailBtn{
+   font-size: 12px;
+ }
+
+ #aboutUs .socialBtn{
+ 	font-size: 20px;
+ }
+ #aboutUs .socialBtn .fa {
+   width:30px;
+ }
+}
+@media screen and (max-width: 780px){
+  #ourOpinion .name{
+  	font-size: 18px;
+  }
+  #ourOpinion .job{
+    font-size: 10px;
+  }
+  #aboutUs .emailBtn{
+    font-size: 10px;
+  }
+
+  #aboutUs .socialBtn{
+  	font-size: 18px;
+  }
+  #aboutUs .socialBtn .fa {
+    width:30px;
+  }
+}
 @media screen and (max-width: 750px) {
     /* Header  sama dengan style.css*/
     /* Site Menu */
@@ -93,3 +161,87 @@
         visibility: visible;
         position: relative;
     }
+
+    #ourOpinion .quote {
+    	font-size: 15px;
+      margin-left: 5px;
+    }
+    #ourOpinion .name{
+    	font-size: 15px;
+    }
+    #ourOpinion .job{
+      font-size: 7px;
+    }
+    #ourOpinion .prev, .next {
+      font-size: 50px;
+    }
+    .pict{
+     height:130px;
+     width:130px;
+   }
+
+    .backText{
+     height:150px;
+     width:150px;
+   }
+
+   .imgRounded{
+       width: 130px;
+       height: 130px;
+   }
+
+
+  }
+@media screen and (max-width: 550px){
+  #ourOpinion .pict{
+  	right: 0%;
+    margin-bottom: 2%;
+  }
+  #ourOpinion .quote {
+  	font-size: 20px;
+    text-align: center;
+  }
+  #ourOpinion .name{
+  	font-size: 20px;
+  }
+  #ourOpinion .job{
+    font-size: 12px;
+  }
+  #ourOpinion .prev, .next {
+    font-size: 120px;
+  }
+  #ourOpinion .bio{
+    text-align: center;
+  }
+
+  .pict{
+   height:250px;
+   width:250px;
+ }
+
+  .backText{
+   height:270px;
+   width:270px;
+ }
+
+ .imgRounded{
+     width: 250px;
+     height: 250px;
+ }
+
+ #aboutUs .name{
+     max-width:350px;
+     font-size: 3.6rem;
+ }
+
+ #aboutUs .emailBtn{
+   font-size: 15px;
+ }
+
+ #aboutUs .socialBtn{
+ 	font-size: 30px;
+ }
+ #aboutUs .socialBtn .fa {
+   width:50px;
+ }
+}
