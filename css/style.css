@@ -168,7 +168,8 @@ a{
         top: 15px;
 }
 .animateSlider{
-    animation:Myslider 14s infinite;
+    opacity: 0;
+    animation:Myslider 14s 2;
 }
 
     @keyframes Myslider{
