@@ -22,7 +22,8 @@
   margin-bottom: 10px;
 
 }
-#aboutDota .main-title::after {
+/*
+#aboutDota #main {
   content: "";
   position: absolute;
   bottom: 0;
@@ -32,7 +33,7 @@
   background: #fff;
 }
 
-#aboutDota .main-title::before {
+#aboutDota  {
   content: "";
   position: absolute;
   bottom: 0;
@@ -41,7 +42,9 @@
   height: 2px;
   background: #d7d7;
   padding-top: 3px;
-}
+}*/
+
+
 
 #aboutDota{
     height: 450px;
@@ -70,7 +73,7 @@
 /*treasure*/
 
 #treasure {
-    height: 700px;
+    height: 750px;
     position: static;
     box-sizing: border-box;
     background-color: #0B0F10;
@@ -85,6 +88,7 @@
       100% { -webkit-transform : rotateY(0deg) rotateZ(0deg)}
 }
 
+
 @keyframes example {
     from {background-color: white;}
     to {background-color: green;}
@@ -97,11 +101,6 @@
 }
 
 
-#treasure #keepMoving:hover {
-    animation-name: moveIt;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
 
 #treasure .circle {
   border-width : 1px;
@@ -122,11 +121,6 @@
   height: 60px;
   width: 60px;
   padding: 0px !important;
-}
-
-#dayumtest:hover {
-  transition: .5 ease;
-  background-color: green;
 }
 
 #treasure .text-title {
@@ -181,6 +175,27 @@ td.padL {
 }
 
 /* Battle Pass */
+
+#battlepass {
+    height: 350px;
+    position: static;
+    box-sizing: border-box;
+    background-color: #0B0F10;
+    padding: 0 !important;
+    z-index: 1;
+    font-family: 'Poppins' !important;
+}
+
+#battlepass img {
+  position: relative;
+  height: 200px;
+  bottom: -20px;
+  right:-190px;
+  opacity: 0.4;
+}
+
 #battlepass .three.columns {
   width: 25% !important;
+  position: relative;
+  z-index: 1;
 }

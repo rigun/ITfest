@@ -14,7 +14,9 @@
     <section id="aboutDota">
             <div class="row" style="margin-top:5%;margin-left:5%">
                 <div class="three columns color forReveal" id="main">
-                  <h4 class="main-title" id="mainTitle">About Dota2</h4>
+                  <h4 class="main-title" id="mainTitle" style="margin-bottom:0">About Dota2</h4>
+                  <hr class="garis" id="maingaris1" style="width:15%; margin:0;background:purple;height:2px"></hr>
+                  <hr class="garis" id="maingaris2" style="margin-left:0; margin-top:0"></hr>
                       <p style="text-align:justify">Dota2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation.
                       The game is the stand-alone sequel to Defense of the Ancients (DotA)</p>
                 </div>
@@ -43,20 +45,20 @@
     </section>
 
     <section id="treasure">
-            <div class="twelve columns color" style="text-align:center">
+            <div class="twelve columns color forReveal" style="text-align:center" id="trove">
                 <p class="text-title">Newest Treasure on Dota2</p>
                 <h1>Trove Carafe 2017</h1>
               </div>
 
               <div class="row">
-              <div class="seven columns" style="text-align:center">
+              <div class="seven columns forReveal" style="text-align:center" id="kotak">
                 <img src="images/carafe.png" id="keepMoving">
               </div>
 
               <div class="five columns color">
                 <table class="u-full-width">
 
-                <tr id="item">
+                <tr id="item" class="forReveal">
                   <td style="text-align:right"> <!--inget ganti pake absolute -->
                     <div class="circle">
                         <img src="images/harga.png" class="inner">
@@ -69,7 +71,7 @@
                   </td>
                 </tr>
 
-                <tr id="part">
+                <tr id="part" class="forReveal">
                   <td style="text-align:right">
 
                     <div class="circle">
@@ -83,7 +85,7 @@
                   </td>
                 </tr>
 
-                <tr id="rare">
+                <tr id="rare" class="forReveal">
                   <td style="text-align:right">
                     <div class="circle">
                         <img src="images/harga.png" class="inner">
@@ -96,7 +98,7 @@
                   </td>
                 </tr>
 
-                <tr id="price">
+                <tr id="price" class="forReveal">
                   <td style="text-align:right">
                     <div class="circle">
                         <img src="images/harga.png" class="inner">
@@ -142,7 +144,9 @@
       sr.reveal('#gameplay , #heroesxxx , #competition', {origin: 'right', rotate: {x:90, y:30, z:-90}, duration: 2000, distance:'80%', delay:350});
       sr.reveal('#main', {origin: 'left', rotate: {x:0, y:0, z:0}, duration: 1000, distance:'50%'});
       sr.reveal('#item, #part, #rare, #price', {scale:0.1, viewOffset: { bottom: 65 }, duration: 1000});
-
+      sr.reveal('#item', {scale:0.1, viewOffset: { bottom: 170 }, duration: 1000});
+      sr.reveal('#trove', {scale:0.3, duration:1000, viewOffset: {bottom:100}});
+      sr.reveal('#kotak', {rotate: {x: 90, y:30, z:-90}, origin: 'left', duration:2000, viewOffset: {bottom:150}});
       </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

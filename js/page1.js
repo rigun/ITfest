@@ -57,16 +57,37 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function() {
-    $("#dayumtest").on({
-      mouseenter : function() {
-        $("#dayumtest").css({"animation-name":"example", "animation-duration":"1.5s"});
+$(document).ready(function(){
+    $("#main").on({
+        mouseenter: function(){
+          $("#maingaris1").animate({width : '70%'}, "2000");
+          $("#maingaris2").animate({width : '85%'}, "2000");
 
+        },
+        mouseleave: function(){
+            $("#maingaris1").stop(true,false);
+            $("#maingaris2").stop(true,false);
+            $("#maingaris1").animate({width : '15%'}, "1000");
+            $("#maingaris2").animate({width : '20%'}, "1000");
+
+        },
+    });
+});
+
+$(document).ready(function() {
+    $("#keepMoving").on({
+      mouseenter : function() {
+        var i=0;
+        for(i; i<10; i++){
+          $("#keepMoving").animate({width:'90%'}, "2000");
+          $("#keepMoving").animate({width:'100%'}, "2000");
+        }
       },
 
       mouseleave : function() {
-        $("#dayumtest").stop(true,true);
-        $("#dayumtest").css({"animation-name":"out", "animation-duration":"1s"});
+        $("#keepMoving").stop(true,false);
+
+          $("#keepMoving").animate({width:'100%'}, "2000");
       },
 
     });
