@@ -37,7 +37,6 @@
     if (sr.isSupported()) {
       document.documentElement.classList.add('sr');
     }
-
   </script>
  </head>
 <body ng-app="appitfest">
@@ -93,11 +92,12 @@
 </section>
 <section id="isi">
     <section id="Home" class="Home">
-                    <div class="twelve columns">
                         <img class="mySlider animateSlider" src="images/slider/1.jpg">
                         <img class="mySlider animateSlider" src="images/slider/2.jpg">
                         <img class="mySlider animateSlider" src="images/slider/3.jpg">
                         <img class="mySlider animateSlider" src="images/slider/4.jpg">
+                    <div class="twelve columns">
+                        
                         <div class="content">
                             <div class="eleven columns">
                                 <div class="twelve columns TextSliderOne">
@@ -112,7 +112,7 @@
                                                 </span>
                                             </div>
                                             <div class="four columns">
-                                                <img class="logo" src="images/logo/dota.png">
+                                                <img class="logo" src="images/logo/dota.png" style="position: relative">
                                             </div>
                                     </div>
                                 </div>
@@ -142,11 +142,11 @@
                                 <div class="twelve columns TextSliderFour">
                                     <div class="row">
                                         <center>
-                                            <h1>Two New Heroes in Dota 2</h1>
+                                            <h1>The International</h1>
                                             <p>
-                                                Valve has confirmed two new heroes to be include in Dota 2, as presented in a<br/>
-                                                new trailer shown during The International 7.<br/>
-                                                The Heroes will be introduced in "The Dueling Fates" update.
+                                                The International, often abbreviated as TI, is an annual tournament organized by Valve. In 2015 Valve increased their number of hosted events, founding the Dota Major Championships which incorporates The International into its structure. The International remains the biggest and most prestigious event on the Major Championship circuit.
+                                                <br/>
+                                                in 2017, the winner from this competition is <strong>Team Liquid</strong>
                                             </p>
                                         </center>
                                     </div>
@@ -180,15 +180,15 @@
                     Dota have a lot of hero and they have their own role like Carry, Support, Nuker, Initiator, etc.<br/>
                     Hence, they have two attack type Melee and Ranged.<br/>
                     Before choose a hero, the player have to see the primary attribute from hero like Strength, Agility, and Intelligence <br/>because each attribute is unique<br/>
-                    <button ng-click="filterBy()" class="btnAll"> All </button><button ng-click="filterBy('Strength')" class="btnStrength"> Strength </button><button ng-click="filterBy('Agility')" class="btnAgility"> Agility </button><button ng-click="filterBy('Intelligence')" class="btnIntelligence"> Intelligence </button>
+                    <button ng-click="filterBy()" class="btnAll"> All </button><button ng-click="filterBy('Strength')" class="btnStrength" id="btn"> Strength </button><button ng-click="filterBy('Agility')" class="btnAgility" id="btn"> Agility </button><button ng-click="filterBy('Intelligence')" class="btnIntelligence" id="btn"> Intelligence </button>
                 </center>
                     <div class="twelve columns" >
                         <div class="pictureHeroes three columns" ng-repeat="i in image | filter: myfilterBy">
                             <a><img src={{i.src}}>
+
                             <div class="name"><span>{{i.name}}</span></div>
                             </a>
                             <div class="caption">Skill :<p>{{i.skill}}</p></div>
-
                         </div>
                     </div>
             </div>
@@ -205,8 +205,6 @@
   <script src="js/modernizr.custom.97074.js"></script>
   <script src="js/style.js"></script>
   <script src="js/slider.js"></script>
-  <script>
-  sr.reveal('.heroes .container', {origin: 'left', rotate: {x:0, y:0, z:-90}, duration: 1000});
-  </script>
-</body>
+  <script src="js/mousemove.js"></script>
+ </body>
 </html>
