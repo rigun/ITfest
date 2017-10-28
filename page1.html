@@ -124,43 +124,43 @@
       </div>
 
       <div class="row">
-        <div class="four columns color" id="winter">
+        <div class="four columns color forReveal" id="winter">
           <table>
             <tr>
               <td>
-                <img src="images/winter.png">
+                <img src="images/winter.png" id="winterpic">
               </td>
               <td>
-                <h2>Winter Pass</h2>
-                <hr>
+                <h2 id="winterp">Winter Pass</h2>
+                <hr id="winterhr">
               </td>
             </tr>
           </table>
         </div>
 
-        <div class="four columns color" id="spring">
+        <div class="four columns color forReveal" id="spring">
           <table>
             <tr>
               <td>
-                <img src="images/spring.png">
+                <img src="images/spring.png" id="springpic">
               </td>
               <td>
-                <h2>Spring Pass</h2>
-                <hr>
+                <h2 id="springp">Spring Pass</h2>
+                <hr id="springhr">
               </td>
             </tr>
           </table>
         </div>
 
-        <div class="four columns color" id="fall">
+        <div class="four columns color forReveal" id="fall">
           <table>
             <tr>
               <td>
-                <img src="images/fall.png">
+                <img src="images/fall.png" id="fallpic">
               </td>
               <td>
-                <h2>Fallen Pass</h2>
-                <hr>
+                <h2 id="fallp">Fallen Pass</h2>
+                <hr id="fallhr">
               </td>
             </tr>
           </table>
@@ -177,7 +177,10 @@
       sr.reveal('#item, #part, #rare, #price', {scale:0.1, viewOffset: { bottom: 65 }, duration: 1000});
       sr.reveal('#item', {scale:0.1, viewOffset: { bottom: 170 }, duration: 1000});
       sr.reveal('#trove', {scale:0.3, duration:1000, viewOffset: {bottom:100}});
-      sr.reveal('#kotak', {rotate: {x: 90, y:30, z:-90}, origin: 'left', duration:2000, viewOffset: {bottom:150}});
+      sr.reveal('#kotak', {scale:0.3, origin: 'left', duration:2000, viewOffset: {bottom:150}});
+      sr.reveal('#winter', {origin: 'left', rotate: {x:-45}, distance:'40%', duration:1800,viewOffset: {bottom:130}});
+      sr.reveal('#spring', {origin: 'right', rotate: {x:-90}, duration: 1500, delay:1000,viewOffset: {bottom:130}});
+      sr.reveal('#fall', {origin: 'right', rotate: {x:-45}, distance:'40%', duration: 1500, delay:500,viewOffset: {bottom:130}});
       </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -192,10 +192,21 @@ td.padL {
   position: relative;
   height: 200px;
   opacity: 1;
+  right: -100%;
 }
 
 #battlepass .three.columns {
   width: 32% !important;
   position: relative;
   z-index: 1;
+}
+
+#battlepass h2 {
+  opacity: 0;
+  margin-bottom: 0;
+}
+
+#battlepass hr {
+  opacity: 0;
+  margin-top: 0;
 }

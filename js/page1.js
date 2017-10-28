@@ -103,12 +103,14 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#winter").on({
       mouseenter : function() {
-        $("#winter").animate({opacity:0.5}, "2000");
+        $("#winterpic").animate({right: 0}, "slow");
+        $("#winterp, #winterhr").animate({opacity:1}, "slow");
       },
 
       mouseleave : function() {
-        $("#winter").stop(true,false);
-        $("#winter").animate({opacity:1}, "2000");
+        $("#winterpic, #winterp, #wintehr").stop(true,false);
+        $("#winterpic").animate({right:'-100%'}, "slow");
+        $("#winterp, #winterhr").animate({opacity:0}, "slow");
       },
 
     });
@@ -118,27 +120,29 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#fall").on({
       mouseenter : function() {
-        $("#fall").animate({opacity:0.5}, "2000");
+        $("#fallpic").animate({right: 0}, "slow");
+        $("#fallp, #fallhr").animate({opacity:1}, "slow");
       },
 
       mouseleave : function() {
-        $("#fall").stop(true,false);
-        $("#fall").animate({opacity:1}, "2000");
+        $("#fallpic, #fallp, #fallhr").stop(true,false);
+        $("#fallpic").animate({right:'-100%'}, "slow");
+        $("#fallp, #fallhr").animate({opacity:0}, "slow");
       },
 
     });
 });
-
-
 $(document).ready(function() {
     $("#spring").on({
       mouseenter : function() {
-        $("#spring").animate({opacity:0.5}, "2000");
+        $("#springpic").animate({right: 0}, "slow");
+        $("#springp, #springhr").animate({opacity:1}, "slow");
       },
 
       mouseleave : function() {
-        $("#spring").stop(true,false);
-        $("#spring").animate({opacity:1}, "2000");
+        $("#springpic, #springp, #springhr").stop(true,false);
+        $("#springpic").animate({right:'-100%'}, "slow");
+        $("#springp, #springhr").animate({opacity:0}, "slow");
       },
 
     });
@@ -147,7 +151,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#item").on({
       mouseenter : function() {
-        $("#part, #rare, #price").animate({opacity:0.3}, "fast");
+        $("#part, #rare, #price").animate({opacity:0.2}, "fast");
       },
 
       mouseleave : function() {
@@ -161,7 +165,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#part").on({
       mouseenter : function() {
-        $("#item, #rare, #price").animate({opacity:0.3}, "fast");
+        $("#item, #rare, #price").animate({opacity:0.2}, "fast");
       },
 
       mouseleave : function() {
@@ -175,7 +179,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#rare").on({
       mouseenter : function() {
-        $("#item, #part, #price").animate({opacity:0.3}, "fast");
+        $("#item, #part, #price").animate({opacity:0.2}, "fast");
       },
 
       mouseleave : function() {
@@ -189,7 +193,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#price").on({
       mouseenter : function() {
-        $("#item, #rare, #part").animate({opacity:0.3}, "fast");
+        $("#item, #rare, #part").animate({opacity:0.2}, "fast");
       },
 
       mouseleave : function() {
