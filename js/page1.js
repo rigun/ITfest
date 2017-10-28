@@ -79,15 +79,122 @@ $(document).ready(function() {
       mouseenter : function() {
         var i=0;
         for(i; i<10; i++){
-          $("#keepMoving").animate({width:'90%'}, "2000");
-          $("#keepMoving").animate({width:'100%'}, "2000");
+          $("#keepMoving").animate({width:'90%'}, "2000", 'linear');
+          var j=0;
+          for(j; j<5; j++) {
+            $("#keepMoving").animate({width: '88%'}, "fast");
+            if(j!=4) {
+              $("#keepMoving").animate({width:'90%'}, "fast");
+            }
+            else $("#keepMoving").animate({width:'100%'}, "2000");
+
+          }
         }
       },
 
       mouseleave : function() {
         $("#keepMoving").stop(true,false);
+        $("#keepMoving").animate({width:'100%'}, "2000");
+      },
 
-          $("#keepMoving").animate({width:'100%'}, "2000");
+    });
+});
+
+$(document).ready(function() {
+    $("#winter").on({
+      mouseenter : function() {
+        $("#winter").animate({opacity:0.5}, "2000");
+      },
+
+      mouseleave : function() {
+        $("#winter").stop(true,false);
+        $("#winter").animate({opacity:1}, "2000");
+      },
+
+    });
+});
+
+
+$(document).ready(function() {
+    $("#fall").on({
+      mouseenter : function() {
+        $("#fall").animate({opacity:0.5}, "2000");
+      },
+
+      mouseleave : function() {
+        $("#fall").stop(true,false);
+        $("#fall").animate({opacity:1}, "2000");
+      },
+
+    });
+});
+
+
+$(document).ready(function() {
+    $("#spring").on({
+      mouseenter : function() {
+        $("#spring").animate({opacity:0.5}, "2000");
+      },
+
+      mouseleave : function() {
+        $("#spring").stop(true,false);
+        $("#spring").animate({opacity:1}, "2000");
+      },
+
+    });
+});
+
+$(document).ready(function() {
+    $("#item").on({
+      mouseenter : function() {
+        $("#part, #rare, #price").animate({opacity:0.3}, "fast");
+      },
+
+      mouseleave : function() {
+        $("#part, #rare, #price").stop(true,false);
+        $("#part, #rare, #price").animate({opacity:1}, "fast");
+      },
+
+    });
+});
+
+$(document).ready(function() {
+    $("#part").on({
+      mouseenter : function() {
+        $("#item, #rare, #price").animate({opacity:0.3}, "fast");
+      },
+
+      mouseleave : function() {
+        $("#item, #rare, #price").stop(true,false);
+        $("#item, #rare, #price").animate({opacity:1}, "fast");
+      },
+
+    });
+});
+
+$(document).ready(function() {
+    $("#rare").on({
+      mouseenter : function() {
+        $("#item, #part, #price").animate({opacity:0.3}, "fast");
+      },
+
+      mouseleave : function() {
+        $("#item, #part, #price").stop(true,false);
+        $("#item, #part, #price").animate({opacity:1}, "fast");
+      },
+
+    });
+});
+
+$(document).ready(function() {
+    $("#price").on({
+      mouseenter : function() {
+        $("#item, #rare, #part").animate({opacity:0.3}, "fast");
+      },
+
+      mouseleave : function() {
+        $("#item, #rare, #part").stop(true,false);
+        $("#item, #rare, #part").animate({opacity:1}, "fast");
       },
 
     });
